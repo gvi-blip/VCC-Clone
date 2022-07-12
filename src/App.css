@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+/* General classes*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.mts {
+  font-family: "Montserrat", sans-serif;
+}
+
+.middot {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 18px;
+  color: #b5b5b5;
+  margin: 0 10px;
+  /* border: 1px solid black; */
+}
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header .links a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #222222;
+  margin-left: 35px;
+}
+
+.header .links i {
+  margin-right: 15px;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+  line-height: 18px;
+  margin-top: 20px;
+}
+
+nav i {
+  position: relative;
+  bottom: 3px;
+}
+nav .links {
+  width: 69%;
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #222222;
+  font-size: 14px;
+}
+
+nav button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+}
+
+nav button:hover {
+  cursor: pointer;
+}
+
+.adv {
+  text-align: center;
+  background: #f0f0f0;
+  font-weight: 400;
+  color: #222222;
+  font-size: 12px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.adv-l {
+  padding: 5px 0;
+  width: 100%;
+}
+
+.adv-s {
+  width: 300px;
+}
+/* top news section */
+.top-news {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 15px 0;
+}
+
+.top-news .text-content {
+  width: 560px;
+}
+
+.top-news .text-content p:first-of-type {
+  font-weight: 600;
+  color: #096ffa;
+  margin-top: 5px;
+}
+
+.top-news .text-content h1 {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 32px;
+  letter-spacing: -0.64px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.top-news .text-content p:nth-of-type(2) {
+  font-weight: 400;
+  color: green;
+  font-size: 16px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.top-news .text-content p:nth-of-type(3) {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.top-news .text-content span {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #798692;
+}
+.top-news .text-content span:nth-of-type(2) {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 18px;
+  color: #b5b5b5;
+  margin: 0 10px;
+}
+
+.top-news .text-content button {
+  background: #096ffa;
+  border: none;
+  border-radius: 20px;
+  letter-spacing: 0.24px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  width: 160px;
+  height: 30px;
+}
+
+.image {
+  width: 560px;
+}
+
+.image img {
+  width: 100%;
+}
+/* Top News Cards */
+.tn-cards-cont {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 50px 0;
+}
+
+.top-news-cards {
+  /* border: 1px solid black; */
+  width: 270px;
+}
+
+.top-news-cards img {
+  width: 100%;
+}
+
+.top-news-cards .card-title {
+  color: #096ffa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+.top-news-cards .card-content {
+  color: #222222;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  line-height: 24px;
+}
+
+/* Card Common properties */
+.card-date {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #798692;
+}
+
+.card-author {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #798692;
+}
+
+.slider-comp .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-comp title p {
+  font-weight: 600;
+}
+.slider-comp title p i {
+  font-size: 8px !important;
+}
+.slider-comp .cards {
+  display: flex;
+}
+
+.lp-cards {
+  border: 1px solid black;
+  padding: 10px;
+  width: 230px;
+}
+
+.lp-cards .card-content {
+  color: #222222;
+}
+
+.lp-cards + .lp-cards {
+  margin-left: 25px;
+}
