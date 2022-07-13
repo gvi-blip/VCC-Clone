@@ -28,6 +28,7 @@ import LP2 from "./images/LimitedPartner/LP2.png";
 import LP3 from "./images/LimitedPartner/LP3.png";
 import LP4 from "./images/LimitedPartner/LP4.png";
 import Envelope from "./images/envelope.png";
+import Footer from "./Footer";
 
 import "./App.css";
 const topNewsCards = [
@@ -413,6 +414,7 @@ function App() {
           })}
         </div>
       </section>
+      <Footer></Footer>
     </div>
   );
 }
