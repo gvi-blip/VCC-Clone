@@ -6,6 +6,7 @@ import Adv2 from "./Advertisment/Adv2.png";
 import Adv3 from "./Advertisment/Adv3.png";
 import RCwsa from "./RCwsa";
 import Advertisment from "./Advertisment/Advertisment";
+import VCCTV from "./VCCTV";
 import ManufacturingImg from "./images/topnews/manufacturing.png";
 import TNEconomy from "./images/TopNewsCards/Economy.png";
 import TNConsumer from "./images/TopNewsCards/Consumer.png";
@@ -15,10 +16,15 @@ import EPConsumer from "./images/EditorsPick/Consumer.png";
 import EPEconomy from "./images/EditorsPick/Economy.png";
 import EPFinance from "./images/EditorsPick/Finance.png";
 import EPTMT from "./images/EditorsPick/TMT.png";
+import MPTMT from "./images/MostPopular/TMT.png";
+import MPEconomy from "./images/MostPopular/Economy.png";
+import MPManufacturing from "./images/MostPopular/Manufacturing.png";
+import MPConsumer from "./images/MostPopular/Consumer.png";
 import LP1 from "./images/LimitedPartner/LP1.png";
 import LP2 from "./images/LimitedPartner/LP2.png";
 import LP3 from "./images/LimitedPartner/LP3.png";
 import LP4 from "./images/LimitedPartner/LP4.png";
+
 import "./App.css";
 const topNewsCards = [
   {
@@ -82,6 +88,38 @@ const editorsPickCards = [
     image: EPConsumer,
     content:
       "Delivery race among Indian grocery startups brings road safety risks",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+];
+const mostPopularCards = [
+  {
+    title: "TMT",
+    image: MPTMT,
+    content:
+      "Quick commerce deliveries surge 500% in a year, says logistics provider Shadowfax",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "CONSUMER",
+    image: MPConsumer,
+    content: "Consumer firm Madbow bags $2 mn funding at $13 mn valuation  ",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "ECONOMY",
+    image: MPEconomy,
+    content: "Indian shares hit three-week lows in broad-based selling",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "MANUFACTURING",
+    image: MPManufacturing,
+    content:
+      "HDFC Capital marks initial close at $1.88 bn for its affordable housing fund 3",
     date: "30 September",
     author: "Madhurima Nandy",
   },
@@ -172,6 +210,14 @@ function App() {
       </section>
       <Advertisment image={Adv2} width={720} adclass="adv-l" />
       <RCwsa sectionTitle="Editor's Pick" cards={editorsPickCards} ad={Adv3} />
+      <Advertisment image={Adv1s} width={950} adclass="adv-l" />
+      <RCwsa sectionTitle="Most Popular" cards={mostPopularCards} ad={Adv3} />
+      <Advertisment image={Adv2} width={720} adclass="adv-l" />
+      <VCCTV
+        url="https://www.youtube.com/embed/THL1OPn72vo"
+        date="30 September"
+        author="Madhurima Nandy"
+      />
       {/* <Slider
         sectionTitle="Limited Partner"
         cards={LPcardscontent}
