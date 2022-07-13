@@ -1,7 +1,7 @@
 import React from "react";
 function Footer() {
   return (
-    <footer className="footer">
+    <footer>
       <div>
         <img
           src={require("./images/Footer/Mosaic-digital.png")}

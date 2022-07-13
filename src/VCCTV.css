@@ -1,18 +1,18 @@
-.vcctv {
+.vcctv .container {
   border: 1px solid #00000040;
   padding: 20px 15px 20px 20px;
   border-radius: 15px;
-  margin: 50px 0;
+  margin: 50px auto;
 }
 
-.vcctv > div:first-of-type {
+.vcctv .container > div:first-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
 }
 
-.vcctv > div:nth-of-type(2) {
+.vcctv .container > div:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

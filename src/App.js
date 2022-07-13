@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header/Header";
 import Card from "./Card";
 import Adv1s from "./Advertisment/Adv1s.png";
@@ -29,8 +29,10 @@ import LP3 from "./images/LimitedPartner/LP3.png";
 import LP4 from "./images/LimitedPartner/LP4.png";
 import Envelope from "./images/envelope.png";
 import Footer from "./Footer";
+import Slider from "./Slider";
 
 import "./App.css";
+import "./responsive.css";
 const topNewsCards = [
   {
     title: "ECONOMY",
@@ -170,6 +172,30 @@ const LPcardscontent = [
     date: "30 Sep",
     author: "Madhurima Nandy",
   },
+  {
+    title: "",
+    image: LP3,
+    content:
+      "Kalaari Capital’s partial exits from Dream11 help return $206 mn to LPs",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "",
+    image: LP3,
+    content:
+      "Kalaari Capital’s partial exits from Dream11 help return $206 mn to LPs",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "",
+    image: LP3,
+    content:
+      "Kalaari Capital’s partial exits from Dream11 help return $206 mn to LPs",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
 ];
 
 const moreStoriesCards = [
@@ -274,136 +300,49 @@ const moreStoriesCards = [
   },
 ];
 function App() {
+  let [data, setData] = useState("");
+  function onSubmitHandler(e) {
+    e.preventDefault();
+    console.log(data);
+    setData("");
+  }
   return (
-    <div className="app">
+    <>
       <Header />
-      <Advertisment image={Adv1s} width={950} adclass="adv-l" />
+      <div className="container">
+        <Advertisment image={Adv1s} width={950} adclass="adv-l" />
+      </div>
       <section className="top-news">
-        <div className="text-content">
-          <p className="mts">MANUFACUTRING</p>
-          <h1>
-            Warburg Pincus set to acquire majority stake in auto parts maker
-          </h1>
-          <p className="mts">
-            Private equity firm TPG, which is reportedly heading towards a
-            public listing, said on Thursday it had appointed long-time company
-            executive Todd Sisitsky as president, effective immediately.
-          </p>
-          <p className="mts">
-            <span>30 September</span>
-            <span>&middot;</span>
-            <span>Madhurima Nandy</span>
-          </p>
-          <button className="mts">READ MORE</button>
-        </div>
-        <div className="image">
-          <img src={ManufacturingImg} alt="manufacutring" />
+        <div className="container">
+          <div className="text-content">
+            <p className="mts">MANUFACUTRING</p>
+            <h1>
+              Warburg Pincus set to acquire majority stake in auto parts maker
+            </h1>
+            <p className="mts">
+              Private equity firm TPG, which is reportedly heading towards a
+              public listing, said on Thursday it had appointed long-time
+              company executive Todd Sisitsky as president, effective
+              immediately.
+            </p>
+            <p className="mts">
+              <span>30 September</span>
+              <span>&middot;</span>
+              <span>Madhurima Nandy</span>
+            </p>
+            <button className="mts">READ MORE</button>
+          </div>
+          <div className="image">
+            <img src={ManufacturingImg} alt="manufacutring" />
+          </div>
         </div>
       </section>
       <section className="tn-cards-cont">
-        {topNewsCards.map((card) => {
-          return (
-            <Card
-              class="top-news-cards"
-              image={card.image}
-              title={card.title}
-              author={card.author}
-              date={card.date}
-              content={card.content}
-            />
-          );
-        })}
-      </section>
-      <Advertisment image={Adv2} width={720} adclass="adv-l" />
-      <RCwsa sectionTitle="Editor's Pick" cards={editorsPickCards} ad={Adv3} />
-      <section className="socials">
-        <div>
-          <img src={STwitter} alt="VCCircle Twitter Handle"></img>
-          <div>
-            <p
-              style={{
-                marginBottom: "5px",
-                fontWeight: "700",
-                color: "#888888",
-              }}
-            >
-              VCCircle.com
-            </p>
-            <p style={{ color: "#484848", fontWeight: "medium" }}>
-              World Bank arm IFC to double down its investments into funds in
-              2022
-            </p>
-          </div>
-        </div>
-        <div>
-          <p className="mts">Infographic</p>
-
-          <img src={SInfographic} alt="VCCircle Infographic"></img>
-        </div>
-        <div>
-          <Advertisment image={Adv3} adclass="adv-sp" />
-        </div>
-      </section>
-
-      <Advertisment image={Adv1s} width={950} adclass="adv-l" />
-      <RCwsa sectionTitle="Most Popular" cards={mostPopularCards} ad={Adv3} />
-      <Advertisment image={Adv2} width={720} adclass="adv-l" />
-      <VCCTV
-        url="https://www.youtube.com/embed/THL1OPn72vo"
-        date="30 September"
-        author="Madhurima Nandy"
-      />
-
-      <section className="newsletter">
-        <div className="mts">
-          <img src={Envelope} alt="Envelope icon" />
-
-          <p
-            style={{
-              fontSize: "20px",
-              fontWeight: "regular",
-              color: "#FFFFFFD8",
-            }}
-          >
-            Get industry update with our daily newsletter
-            <p
-              style={{
-                fontSize: "18px",
-                fontWeight: "bold",
-                color: "#FFFFFF",
-              }}
-            >
-              Subscribe Now !
-            </p>
-          </p>
-        </div>
-        <div>
-          <form action="/" name="form1">
-            <input
-              type="email"
-              placeholder="Email address"
-              name="email"
-              id="email"
-            />
-            <button type="button">SIGN UP</button>
-          </form>
-        </div>
-        <div></div>
-      </section>
-      {/* <Slider
-        sectionTitle="Limited Partner"
-        cards={LPcardscontent}
-        class="limited-partner"
-        cardClass="lp-cards"
-      /> */}
-      <section className="more-stories">
-        <h3 className="mts">More Stories</h3>
-        <div>
-          {moreStoriesCards.map((card) => {
-            if (card.adv) return card.adv;
+        <div className="container">
+          {topNewsCards.map((card) => {
             return (
               <Card
-                class="more-stories-cards"
+                class="top-news-cards"
                 image={card.image}
                 title={card.title}
                 author={card.author}
@@ -414,8 +353,135 @@ function App() {
           })}
         </div>
       </section>
+      <div className="container">
+        <Advertisment image={Adv2} width={720} adclass="adv-l" />
+      </div>
+
+      <RCwsa sectionTitle="Editor's Pick" cards={editorsPickCards} ad={Adv3} />
+
+      <section className="socials">
+        <div className="container">
+          <div>
+            <img src={STwitter} alt="VCCircle Twitter Handle"></img>
+            <div>
+              <p
+                style={{
+                  marginBottom: "5px",
+                  fontWeight: "700",
+                  color: "#888888",
+                }}
+              >
+                VCCircle.com
+              </p>
+              <p style={{ color: "#484848", fontWeight: "medium" }}>
+                World Bank arm IFC to double down its investments into funds in
+                2022
+              </p>
+            </div>
+          </div>
+          <div>
+            <p className="mts">Infographic</p>
+
+            <img src={SInfographic} alt="VCCircle Infographic"></img>
+          </div>
+          <div>
+            <Advertisment image={Adv3} adclass="adv-sp" />
+          </div>
+        </div>
+      </section>
+
+      <Slider
+        sectionTitle="Limited Partner"
+        cards={LPcardscontent}
+        class="limited-partner"
+        cardClass="lp-cards"
+      />
+      <div className="container">
+        <Advertisment image={Adv1s} width={950} adclass="adv-l" />
+      </div>
+      <Slider
+        sectionTitle="VCCircle Premium"
+        titleImg="./path"
+        cards={topNewsCards}
+        class="vc-premium"
+        cardClass="vcp-cards"
+      />
+      <RCwsa sectionTitle="Most Popular" cards={mostPopularCards} ad={Adv3} />
+
+      <div className="container">
+        <Advertisment image={Adv2} width={720} adclass="adv-l" />
+      </div>
+      <VCCTV
+        url="https://www.youtube.com/embed/THL1OPn72vo"
+        date="30 September"
+        author="Madhurima Nandy"
+      />
+
+      <section className="newsletter">
+        <div className="container">
+          <div className="mts">
+            <img src={Envelope} alt="Envelope icon" />
+
+            <p
+              style={{
+                fontSize: "20px",
+                fontWeight: "regular",
+                color: "#FFFFFFD8",
+              }}
+            >
+              Get industry update with our daily newsletter
+              <p
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                  color: "#FFFFFF",
+                }}
+              >
+                Subscribe Now !
+              </p>
+            </p>
+          </div>
+          <div>
+            <form action="/" name="form1" onSubmit={onSubmitHandler}>
+              <input
+                type="email"
+                placeholder="Email address"
+                name="email"
+                id="email"
+                value={data}
+                onChange={(e) => {
+                  setData(e.target.value);
+                }}
+              />
+
+              <button type="submit">SIGN UP</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section className="more-stories">
+        <div className="container">
+          <h3 className="mts">More Stories</h3>
+          <div>
+            {moreStoriesCards.map((card) => {
+              if (card.adv) return card.adv;
+              return (
+                <Card
+                  class="more-stories-cards"
+                  image={card.image}
+                  title={card.title}
+                  author={card.author}
+                  date={card.date}
+                  content={card.content}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
       <Footer></Footer>
-    </div>
+    </>
   );
 }
 
