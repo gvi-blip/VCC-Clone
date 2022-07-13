@@ -4,18 +4,22 @@ import Card from "./Card";
 import Adv1s from "./Advertisment/Adv1s.png";
 import Adv2 from "./Advertisment/Adv2.png";
 import Adv3 from "./Advertisment/Adv3.png";
+import RCwsa from "./RCwsa";
 import Advertisment from "./Advertisment/Advertisment";
 import ManufacturingImg from "./images/topnews/manufacturing.png";
-import Slider from "./Slider.js";
-import "./App.css";
 import TNEconomy from "./images/TopNewsCards/Economy.png";
 import TNConsumer from "./images/TopNewsCards/Consumer.png";
 import TNFinance from "./images/TopNewsCards/Finance.png";
 import TNEconomy2 from "./images/TopNewsCards/Economy2.png";
+import EPConsumer from "./images/EditorsPick/Consumer.png";
+import EPEconomy from "./images/EditorsPick/Economy.png";
+import EPFinance from "./images/EditorsPick/Finance.png";
+import EPTMT from "./images/EditorsPick/TMT.png";
 import LP1 from "./images/LimitedPartner/LP1.png";
 import LP2 from "./images/LimitedPartner/LP2.png";
 import LP3 from "./images/LimitedPartner/LP3.png";
 import LP4 from "./images/LimitedPartner/LP4.png";
+import "./App.css";
 const topNewsCards = [
   {
     title: "ECONOMY",
@@ -49,13 +53,36 @@ const topNewsCards = [
     author: "Madhurima Nandy",
   },
 ];
-const editorsPick = [
+const editorsPickCards = [
   {
-    title: "",
-    image: LP1,
+    title: "ECONOMY",
+    image: EPEconomy,
     content:
-      "Yatra Angel Network’s debut Rs 90 cr angel fund gets bulk of commitments",
-    date: "30 Sep",
+      "EMERGING MARKETS - Asian markets mixed as they digest Chinese data; South Korean stocks fall",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "FINANCE",
+    image: EPFinance,
+    content:
+      "RIL invests Rs 7600 crores in acquisitions to strengthen retail arm",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "TMT",
+    image: EPTMT,
+    content: "Dailyhunt parent raises close to $28 mn at $3.1 bn valuation",
+    date: "30 September",
+    author: "Madhurima Nandy",
+  },
+  {
+    title: "CONSUMER",
+    image: EPConsumer,
+    content:
+      "Delivery race among Indian grocery startups brings road safety risks",
+    date: "30 September",
     author: "Madhurima Nandy",
   },
 ];
@@ -144,10 +171,7 @@ function App() {
         })}
       </section>
       <Advertisment image={Adv2} width={720} adclass="adv-l" />
-      <section className="ed-pick">
-        <div></div>
-        <Advertisment image={Adv3} adclass="adv-s" />
-      </section>
+      <RCwsa sectionTitle="Editor's Pick" cards={editorsPickCards} ad={Adv3} />
       {/* <Slider
         sectionTitle="Limited Partner"
         cards={LPcardscontent}

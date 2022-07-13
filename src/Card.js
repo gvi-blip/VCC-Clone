@@ -13,7 +13,7 @@ function Card(props) {
       </div>
       <div>
         <p className="card-title">{props.title}</p>
-        <p className="card-content">{props.content}</p>
+        <p className="card-content mts">{props.content}</p>
 
         <span className="card-date">{props.date}</span>
         <span className="middot">&middot;</span>

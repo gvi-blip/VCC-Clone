@@ -83,23 +83,30 @@ nav button:hover {
   cursor: pointer;
 }
 
+/* Advertisement */
 .adv {
   text-align: center;
   background: #f0f0f0;
   font-weight: 400;
   color: #222222;
   font-size: 12px;
-  margin-top: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
 .adv-l {
+  margin-top: 20px;
   padding: 5px 0;
   width: 100%;
 }
 
 .adv-s {
-  width: 300px;
+  padding-top: 5px;
+  width: 290px;
+  height: max-content;
+}
+
+.adv-s img {
+  width: 100%;
 }
 /* top news section */
 .top-news {
@@ -221,6 +228,88 @@ nav button:hover {
   font-family: "Montserrat";
   font-size: 12px;
   color: #798692;
+}
+
+/* Small ad section */
+.small-ad-comp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+.small-ad-comp .content {
+  width: 73%;
+}
+
+.sac-card-cont {
+  margin-top: 10px;
+  display: flex;
+  /* justify-content: space-between; */
+  border-right: 1px solid #e3e3e3;
+}
+
+.rcwsa-card-l {
+  width: 365px;
+}
+
+.rcwsa-card-l img {
+  width: 100%;
+}
+
+.sac-card-cont .card-title {
+  color: #096ffa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+.sac-card-cont > div {
+  margin-right: 25px;
+}
+
+.rcwsa-card-l .card-content {
+  color: #222222;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.rcwsa-cards-s .card-image-cont {
+  margin-right: 10px;
+}
+.rcwsa-cards-s {
+  /* height: 100px; */
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.rcwsa-cards-s + .rcwsa-cards-s {
+  border-top: 1px solid #e3e3e3;
+}
+.rcwsa-cards-s:first-of-type {
+  padding-top: 0;
+}
+.rcwsa-cards-s:nth-of-type(3) {
+  padding-bottom: 0;
+}
+.rcwsa-cards-s .card-title {
+  margin: 0 0 8px 0;
+}
+
+.rcwsa-cards-s .card-content {
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.rcwsa-cards-s .card-content {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .slider-comp .title {
