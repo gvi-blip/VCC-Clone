@@ -11,13 +11,13 @@ function VCCTV(props) {
         <button className="mts" style={{ fontWeight: "medium" }}>
           View More
           <i
-            class="fa-solid fa-chevron-right"
+            className="fa-solid fa-chevron-right"
             style={{ fontSize: "10px", margin: "0 10px" }}
           ></i>
         </button>
       </div>
       <div>
-        <iframe src={props.url} frameborder="0" title="Vid"></iframe>
+        <iframe src={props.url} frameBorder="0" title="Vid"></iframe>
         <div className="text-content mts">
           <p>HEALTHCARE</p>
           <h1>
