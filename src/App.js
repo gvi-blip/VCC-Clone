@@ -6,7 +6,7 @@ import Advertisment from "./Advertisment/Advertisment";
 import VCCTV from "./VCCTV";
 import Footer from "./Footer";
 import Slider from "./Slider";
-
+// import Adv3 from './Advertisment/Adv3.png'
 import "./App.css";
 import "./responsive.css";
 import {
@@ -65,6 +65,9 @@ function App() {
           </div>
         </div>
       </section>
+      <div className="container">
+        <Advertisment image={"./Adv3.png"} adclass="adv-s ad-b-tn" />
+      </div>
       <section className="tn-cards-cont">
         <div className="container">
           {topNewsCards.map((card) => {

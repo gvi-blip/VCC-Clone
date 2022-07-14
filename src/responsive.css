@@ -56,6 +56,12 @@
     width: 95%;
   }
 
+  .ad-b-tn {
+    margin: 0 auto;
+    width: 85%;
+    margin: 30px auto;
+  }
+
   .top-news .container {
     border-bottom: 1px solid #eeeeee;
   }
@@ -65,13 +71,37 @@
   .top-news-cards {
     width: 100%;
     display: flex;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
   }
-
+  .tn-cards-cont {
+    border-top: 1px solid #eeeeee;
+  }
   .top-news-cards .card-image-cont {
     margin-right: 10px;
-    width: 200px;
-    border: 1px solid black;
   }
+
+  .top-news-cards .card-image-cont img {
+    width: 180px;
+  }
+
+  .top-news-cards .card-title {
+    margin: 0 0 2px 0;
+  }
+
+  .top-news-cards .card-content {
+    height: 65px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .top-news-cards > div:nth-of-type(2) p:nth-of-type(3) {
+    font-size: 10px;
+    height: 20px;
+    overflow: hidden;
+  }
+
   .vcctv .container {
     border-right: none;
     border-left: none;
@@ -149,6 +179,38 @@
     height: 80px;
     overflow: hidden;
   }
+
+  .top-news-cards .card-image-cont img {
+    width: 150px;
+  }
+  .top-news-cards .card-title {
+    font-size: 10px;
+  }
+  .top-news-cards .card-content {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+    height: 54px;
+    overflow: hidden;
+  }
+
+  .top-news-cards .card-date {
+    font-size: 10px;
+  }
+  .top-news-cards .middot {
+    margin: 0 2px;
+    font-size: 12px;
+  }
+  .top-news-cards .card-author {
+    font-size: 10px;
+  }
+
+  .top-news-cards div:nth-of-type(2) p:nth-of-type(3) {
+    font-size: 8px !important;
+    height: 20px;
+    overflow: hidden;
+    line-height: 15px;
+  }
   .more-stories-cards .card-title {
     font-size: 10px !important;
     letter-spacing: 1px !important;
@@ -169,11 +231,9 @@
     /* border: 1px solid black; */
   }
   .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
-    /* border: 1px solid black; */
     font-size: 8px !important;
     height: 20px;
     overflow: hidden;
-    /* border: 1px solid black; */
   }
 }
 @media (min-width: 576px) {
@@ -185,6 +245,9 @@
     margin-top: 2px;
   }
 
+  .ad-b-tn {
+    display: none;
+  }
   .top-news-cards {
     width: 45%;
     margin-bottom: 40px;
