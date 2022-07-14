@@ -280,8 +280,12 @@ nav button:hover {
   justify-content: space-between;
   align-items: flex-start;
   padding: 50px 0;
+  width: 100%;
 }
 
+.small-ad-comp .adv {
+  margin-left: 20px;
+}
 .small-ad-comp:first-of-type {
   border-bottom: 1px solid #e3e3e3;
 }
@@ -292,7 +296,8 @@ nav button:hover {
 .sac-card-cont {
   margin-top: 10px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  flex-wrap: nowrap;
   border-right: 1px solid #e3e3e3;
 }
 
@@ -305,6 +310,10 @@ nav button:hover {
 }
 
 .rcwsa-card-l img {
+  width: 100%;
+}
+
+.rcwsa-card-l .card-image-cont {
   width: 100%;
 }
 

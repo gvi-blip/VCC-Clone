@@ -102,6 +102,12 @@
     overflow: hidden;
   }
 
+  .small-ad-comp .content h2 {
+    text-align: left;
+  }
+  .sac-card-cont {
+    justify-content: flex-start !important;
+  }
   .vcctv .container {
     border-right: none;
     border-left: none;
@@ -260,6 +266,7 @@
   .top-news-cards .card-content {
     height: 100px;
   }
+
   .vcctv .container > div:nth-of-type(2) {
     flex-wrap: wrap;
     justify-content: center;
@@ -322,6 +329,42 @@
   .more-stories-cards:nth-of-type(12) {
     display: none;
   }
+  .sac-card-cont {
+    border-right: none;
+  }
+  .content {
+    order: 2;
+    margin-top: 50px;
+  }
+
+  .sac-card-cont {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .rcwsa-card-l {
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 100%;
+  }
+  .rcwsa-card-s {
+    margin-right: 0;
+    width: 100%;
+  }
+  .small-ad-comp {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  .small-ad-comp .adv-s {
+    margin: 30px 0;
+    width: 90%;
+    order: 1;
+  }
+
+  .sac-card-cont > div:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -336,7 +379,26 @@
   .adv p {
     margin-top: 5px;
   }
+  /* .small-ad-comp {
+    flex-wrap: wrap;
+    justify-content: center;
+  } */
+  .rcwsa-card-l {
+    width: 280px;
+  }
+  .rcwsa-cards-s {
+    width: 380px;
+  }
+  .small-ad-comp {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0px;
+  }
 
+  .small-ad-comp .adv-s {
+    margin: 30px 0;
+    width: 70%;
+  }
   .vcctv .text-content {
     margin-top: 15px;
     width: 530px;
@@ -381,6 +443,20 @@
   }
   .top-news-cards .middot {
     margin: 5px;
+  }
+
+  .small-ad-comp {
+    flex-wrap: nowrap;
+  }
+  .rcwsa-card-l {
+    width: 280px;
+  }
+  .rcwsa-cards-s {
+    width: 360px;
+  }
+  .small-ad-comp .adv-s {
+    margin: 0;
+    width: 290px;
   }
   .newsletter form button {
     margin-left: 15px;
@@ -480,7 +556,12 @@
   .image {
     width: 560px;
   }
-
+  .rcwsa-card-l {
+    width: 365px;
+  }
+  .rcwsa-cards-s {
+    width: 420px;
+  }
   .top-news-cards {
     width: 270px;
   }
@@ -512,6 +593,14 @@
   }
   .advl2 img {
     width: 880px;
+  }
+
+  .adv-s {
+    width: 350px;
+  }
+
+  .sac-card-cont {
+    width: 900px;
   }
 
   .vcctv iframe {
