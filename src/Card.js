@@ -5,7 +5,7 @@ function Card(props) {
     <div className={props.class}>
       <div className="card-image-cont">
         <img
-          src={props.image}
+          src={require(`${props.image}`)}
           alt={props.alt}
           height={`${props.height ? props.height : ""}`}
           width={`${props.width ? props.width : ""}`}

@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "../images/Header/Logo.png";
-import Search from "../images/Header/magnifying-glass.png";
-import Crown from "../images/Header/crown.png";
+
 function Header() {
   return (
     <>

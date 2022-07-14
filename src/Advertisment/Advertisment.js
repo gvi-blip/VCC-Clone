@@ -5,7 +5,7 @@ function Advertisment(props) {
     <div className={`adv ${props.adclass}`}>
       <p>Advertisment</p>
       <img
-        src={props.image}
+        src={require(`${props.image}`)}
         alt="Ad Img"
         style={{ marginTop: "10px" }}
         height={`${props.height ? props.height : ""}`}

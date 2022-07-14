@@ -329,6 +329,10 @@ nav button:hover {
   justify-content: space-between;
   padding: 15px 0;
 }
+
+.rcwsa-cards-s .card-image-cont {
+  width: ;
+}
 .rcwsa-cards-s + .rcwsa-cards-s {
   border-top: 1px solid #e3e3e3;
 }
@@ -562,7 +566,6 @@ footer p {
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
-  border: 1px solid white;
 }
 .slider-comp title p {
   font-weight: 600;
@@ -637,6 +640,10 @@ footer p {
   padding: 1px 0 25px 0;
 }
 
+.vc-premium .title {
+  margin: 40px 0;
+}
+
 .vc-premium .title h2 {
   font-size: 22px;
   font-family: "Montserrat", sans-serif;
@@ -664,4 +671,5 @@ footer p {
 
 .vcp-cards {
   border: 1px solid white;
+  width: 270px;
 }
