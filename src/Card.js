@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div className={props.class}>
+    <div className={"card " + props.class}>
       <div className="card-image-cont">
         <img
           src={require(`${props.image}`)}
@@ -10,15 +10,23 @@ function Card(props) {
           height={`${props.height ? props.height : ""}`}
           width={`${props.width ? props.width : ""}`}
         />
-        {props.premium ? <div className="premium-tag">PREMIUM</div> : null}
+        {props.premium ? <div className="premium-tag">PREMIUM</div> : ""}
       </div>
       <div>
-        <p className="card-title">{props.title}</p>
-        <p className="card-content mts">{props.content}</p>
+        {props.title ? <p className="card-title">{props.title}</p> : null}
+        <p
+          className={
+            "card-content mts " +
+            (props.cardContClass ? props.cardContClass : "")
+          }
+        >
+          {props.content}
+        </p>
 
         <span className="card-date">{props.date}</span>
-        <span className="middot">&middot;</span>
+        {props.address ? null : <span className="middot">&middot;</span>}
         <span className="card-author">{props.author}</span>
+        {props.address ? <p className="card-address">{props.address}</p> : null}
       </div>
     </div>
   );

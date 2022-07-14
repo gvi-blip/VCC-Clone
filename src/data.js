@@ -115,6 +115,7 @@ const LPcardscontent = [
       "Foundation PE buys 100% LP interest in Prime Venture Partners’ first fund",
     date: "30 Sep",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     title: "",
@@ -131,6 +132,7 @@ const LPcardscontent = [
       "Fresh LP commitment to Indian PE-VC funds sinks after hitting record high",
     date: "30 Sep",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     title: "",
@@ -268,10 +270,433 @@ const moreStoriesCards = [
   },
 ];
 
+const vcPremiumCards = [
+  {
+    title: "TMT",
+    image: "./images/VCPremium/TMT.png",
+    content:
+      "Iron Pillar-backed CoreStack’s game plan to hit $1 bn in annual recurring revenue",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "INFRASTRUCTURE",
+    image: "./images/VCPremium/Infra.png",
+    content:
+      "Actis in talks to acquire Welspun group’s roads for up to Rs 10,000 cr",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "CONSUMER",
+    image: "./images/VCPremium/Consumer.png",
+    content:
+      "Sixth Sense Ventures invests in VC-backed fashion jewellery startup",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "TMT",
+    image: "./images/VCPremium/TMT.png",
+    content:
+      "Iron Pillar-backed CoreStack’s game plan to hit $1 bn in annual recurring revenue",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "INFRASTRUCTURE",
+    image: "./images/VCPremium/Infra.png",
+    content:
+      "Actis in talks to acquire Welspun group’s roads for up to Rs 10,000 cr",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "CONSUMER",
+    image: "./images/VCPremium/Consumer.png",
+    content:
+      "Sixth Sense Ventures invests in VC-backed fashion jewellery startup",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "TMT",
+    image: "./images/VCPremium/TMT.png",
+    content:
+      "Iron Pillar-backed CoreStack’s game plan to hit $1 bn in annual recurring revenue",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "INFRASTRUCTURE",
+    image: "./images/VCPremium/Infra.png",
+    content:
+      "Actis in talks to acquire Welspun group’s roads for up to Rs 10,000 cr",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    title: "CONSUMER",
+    image: "./images/VCPremium/Consumer.png",
+    content:
+      "Sixth Sense Ventures invests in VC-backed fashion jewellery startup",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+];
+
+const tmtCards = [
+  {
+    image: "./images/TMT/TMT1.png",
+    content:
+      "DSG Consumer Partners likely to raise nearly $125 mn for new fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TMT/TMT2.png",
+    content:
+      "NIIF-owned Ayana Renewable in talks to buy solar energy asset for nearly ₹450 crore",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TMT/TMT3.png",
+    content: "Kotak Investment Advisors marks final close of pre-IPO fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TMT/TMT1.png",
+    content:
+      "DSG Consumer Partners likely to raise nearly $125 mn for new fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TMT/TMT2.png",
+    content:
+      "NIIF-owned Ayana Renewable in talks to buy solar energy asset for nearly ₹450 crore",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TMT/TMT3.png",
+    content: "Kotak Investment Advisors marks final close of pre-IPO fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TMT/TMT1.png",
+    content:
+      "DSG Consumer Partners likely to raise nearly $125 mn for new fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TMT/TMT2.png",
+    content:
+      "NIIF-owned Ayana Renewable in talks to buy solar energy asset for nearly ₹450 crore",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TMT/TMT3.png",
+    content: "Kotak Investment Advisors marks final close of pre-IPO fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+];
+
+const tcCards = [
+  {
+    image: "./images/TechCircle/TC1.png",
+    content:
+      "Zomato-backed Shiprocket to pick 75% stake in data platform Wigzo Tech",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC2.png",
+    content:
+      "upGrad net loss widens as advertising expenses jump twofold in FY21",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC3.png",
+    content:
+      "Youth-focused neobank Muvin bags $3 mn in a round led by WaterBridge Ventures",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC4.png",
+    content: "Rooter raises $25 mn led by Lightbox, March Gaming, others",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/TechCircle/TC1.png",
+    content:
+      "Zomato-backed Shiprocket to pick 75% stake in data platform Wigzo Tech",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC2.png",
+    content:
+      "upGrad net loss widens as advertising expenses jump twofold in FY21",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC3.png",
+    content:
+      "Youth-focused neobank Muvin bags $3 mn in a round led by WaterBridge Ventures",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/TechCircle/TC4.png",
+    content: "Rooter raises $25 mn led by Lightbox, March Gaming, others",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+];
+
+const mergAcqCards = [
+  {
+    image: "./images/MergersAcq/1.png",
+    content:
+      "Reliance Retail picks 54% stake in Addverb Technologies for ₹983 cr",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/2.png",
+    content:
+      "Klub will deploy Rs 200 cr fund in first half of 2022: Co-founder & CEO Anurakt Jain",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/3.png",
+    content:
+      "‘We would be looking for an IPO in India’: Fractal Analytics CEO Srikanth Velamakanni",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/4.png",
+    content:
+      "SaaS fintech startup Zaggle rejigs top management team with two new appointments",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/MergersAcq/1.png",
+    content:
+      "Reliance Retail picks 54% stake in Addverb Technologies for ₹983 cr",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/2.png",
+    content:
+      "Klub will deploy Rs 200 cr fund in first half of 2022: Co-founder & CEO Anurakt Jain",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/3.png",
+    content:
+      "‘We would be looking for an IPO in India’: Fractal Analytics CEO Srikanth Velamakanni",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/MergersAcq/4.png",
+    content:
+      "SaaS fintech startup Zaggle rejigs top management team with two new appointments",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+];
+
+const finCards = [
+  {
+    image: "./images/Financials/1.png",
+    content:
+      "Omicron poses limited downside to Indian economy, say economists - Reuters Poll",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/2.png",
+    content:
+      "Kalaari Capital, others back community investment platform threedots",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/3.png",
+    content:
+      "Creator economy firm AppX, education planning platform EduFund secure capital",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/4.png",
+    content:
+      "ADB returns as limited partner for Creador’s fifth Southeast Asia focused fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+];
+
+const founderCards = [
+  {
+    image: "./images/Founders/1.png",
+    content:
+      "BharatPe, 91Springboard co-founders, others back co-living platform Crib",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Founders/2.png",
+    content:
+      "Social network Zorro gets $3.2 mn seed funding from 15 unicorn founders",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/Founders/3.png",
+    content: "Mobile gaming streamer Turnip secures $12.5 mn in Series A round",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Founders/4.png",
+    content:
+      "Cred to buy expense management firm Happay; deal valued at $180 mn",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    pemium: true,
+  },
+  {
+    image: "./images/Founders/1.png",
+    content:
+      "BharatPe, 91Springboard co-founders, others back co-living platform Crib",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Founders/2.png",
+    content:
+      "Social network Zorro gets $3.2 mn seed funding from 15 unicorn founders",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    premium: true,
+  },
+  {
+    image: "./images/Founders/3.png",
+    content: "Mobile gaming streamer Turnip secures $12.5 mn in Series A round",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Founders/4.png",
+    content:
+      "Cred to buy expense management firm Happay; deal valued at $180 mn",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+    pemium: true,
+  },
+];
+
+const upEvCards = [
+  {
+    image: "./images/UpcomingEvents/1.png",
+    title: "Limited Partners Summit 2022",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/2.png",
+    title: "Cloud- The Digital Infrastructure",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/3.png",
+    title: "FUTURE OF TRUST",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/1.png",
+    title: "Limited Partners Summit 2022",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/2.png",
+    title: "Cloud- The Digital Infrastructure",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/3.png",
+    title: "FUTURE OF TRUST",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/1.png",
+    title: "Limited Partners Summit 2022",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/2.png",
+    title: "Cloud- The Digital Infrastructure",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+  {
+    image: "./images/UpcomingEvents/3.png",
+    title: "FUTURE OF TRUST",
+    address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
+  },
+];
 export {
   moreStoriesCards,
   LPcardscontent,
   mostPopularCards,
   editorsPickCards,
   topNewsCards,
+  vcPremiumCards,
+  tmtCards,
+  tcCards,
+  mergAcqCards,
+  finCards,
+  founderCards,
+  upEvCards,
 };

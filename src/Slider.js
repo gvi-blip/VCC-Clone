@@ -14,9 +14,9 @@ function Slider(props) {
   //   }
   // };
 
-  const scroll = (scrollOffset) => {
-    rowRef.current.scrollLeft += scrollOffset;
-  };
+  // const scroll = (scrollOffset) => {
+  //   rowRef.current.scrollLeft += scrollOffset;
+  // };
   return (
     <div className={"slider-comp " + props.class}>
       <div className="container">
@@ -54,6 +54,9 @@ function Slider(props) {
                 author={card.author}
                 date={card.date}
                 content={card.content}
+                premium={card.premium}
+                cardContClass={props.cardContClass}
+                address={card.address}
               />
             );
           })}

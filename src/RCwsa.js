@@ -4,7 +4,7 @@ import Card from "./Card";
 function RCwsa(props) {
   return (
     <div className="container">
-      <section className="small-ad-comp">
+      <section className={"small-ad-comp " + props.class}>
         <div className="content">
           <h2
             className="mts"
