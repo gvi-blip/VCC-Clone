@@ -21,14 +21,28 @@ function Slider(props) {
     <div className={"slider-comp " + props.class}>
       <div className="container">
         <div className="title">
-          <h2>{props.sectionTitle}</h2>
-          <p className="mts">
-            View More{" "}
-            <i
-              className="fa-solid fa-chevron-right"
-              style={{ fontSize: "12px" }}
-            ></i>
-          </p>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <h2 style={{ marginRight: "10px" }}>{props.sectionTitle}</h2>
+            {props.crown ? (
+              <img
+                src={require("./images/Header/crown.png")}
+                alt="Crown"
+                height="24"
+                width="24"
+              />
+            ) : null}
+          </div>
+          {props.subscribeButton ? (
+            <button>SUBSCRIBE</button>
+          ) : (
+            <p className="mts">
+              View More{" "}
+              <i
+                className="fa-solid fa-chevron-right"
+                style={{ fontSize: "12px" }}
+              ></i>
+            </p>
+          )}
         </div>
         <div className="cards" ref={rowRef}>
           {props.cards.map((card) => {

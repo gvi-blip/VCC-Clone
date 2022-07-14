@@ -26,6 +26,26 @@
 button:hover {
   cursor: pointer;
 }
+
+.card-image-cont {
+  position: relative;
+}
+
+.premium-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  height: 18px;
+  width: 60px;
+  background: transparent linear-gradient(90deg, #fe8c00 0%, #f83600 100%) 0% 0%
+    no-repeat padding-box;
+  color: white;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 3px 4px;
+  border-radius: 5px;
+}
 /* Header */
 
 header .container {
@@ -43,8 +63,10 @@ header .links a {
   margin-left: 35px;
 }
 
-header .links i {
-  margin-right: 15px;
+header .links img {
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
 }
 
 /* Nav */
@@ -67,7 +89,7 @@ nav i {
   bottom: 3px;
 }
 nav .links {
-  width: 69%;
+  width: 65%;
   display: flex;
   justify-content: space-between;
 }
@@ -578,6 +600,7 @@ footer p {
 
 .slider-comp .shadow {
   background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
+
   position: absolute;
   z-index: 1;
   height: 250px;
@@ -612,4 +635,33 @@ footer p {
 
 .vc-premium .container {
   padding: 1px 0 25px 0;
+}
+
+.vc-premium .title h2 {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.vc-premium button {
+  height: 30px;
+  width: 140px;
+  background: #096ffa;
+  color: white;
+  border-radius: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.vc-premium .shadow {
+  background: transparent linear-gradient(90deg, #00000041 0%, #000000 100%);
+  position: absolute;
+  z-index: 1;
+  height: 300px;
+  right: 0;
+  top: 20%;
+  width: 150px;
+}
+
+.vcp-cards {
+  border: 1px solid white;
 }

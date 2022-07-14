@@ -1,21 +1,34 @@
 import React from "react";
-import Logo from "./Logo.png";
+import Logo from "../images/Header/Logo.png";
+import Search from "../images/Header/magnifying-glass.png";
+import Crown from "../images/Header/crown.png";
 function Header() {
   return (
     <>
       <header className="header">
         <div className="container">
-          <img src={Logo} alt="VCCircle Logo" height="45" width="130" />
+          <img src={Logo} alt="VCCircle Logo" height="45" width="140" />
           <div className="links">
             <a href="/" className="mts">
-              <i className="fa-solid fa-magnifying-glass"></i>Search
+              <img
+                src={require("../images/Header/magnifying-glass.png")}
+                alt="Search icon"
+              ></img>
+              Search
             </a>
             <a href="/" className="mts">
-              <i className="fa-solid fa-crown" style={{ color: "orange" }}></i>
+              <img
+                src={require("../images/Header/crown.png")}
+                alt="Crown icon"
+              ></img>
               Subscribe
             </a>
             <a href="/" className="mts">
-              <i className="fa-solid fa-user"></i>Sign In
+              <img
+                src={require("../images/Header/User.png")}
+                alt="User icon"
+              ></img>
+              Sign In
             </a>
           </div>
         </div>

@@ -10,6 +10,7 @@ function Card(props) {
           height={`${props.height ? props.height : ""}`}
           width={`${props.width ? props.width : ""}`}
         />
+        {props.premium ? <div className="premium-tag">PREMIUM</div> : null}
       </div>
       <div>
         <p className="card-title">{props.title}</p>

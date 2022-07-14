@@ -41,6 +41,7 @@ const topNewsCards = [
       "Indian shares snap 5-day rally on weak global cues, post weekly gain",
     date: "30 September",
     author: "Madhurima Nandy +1",
+    premium: true,
   },
   {
     title: "FINANCE",
@@ -48,6 +49,7 @@ const topNewsCards = [
     content: "Paytm to shut Canada B2C app amid eroding market capitalisation",
     date: "30 September",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     title: "CONSUMER",
@@ -348,6 +350,7 @@ function App() {
                 author={card.author}
                 date={card.date}
                 content={card.content}
+                premium={card.premium}
               />
             );
           })}
@@ -397,7 +400,7 @@ function App() {
         cardClass="lp-cards"
       />
       <div className="container">
-        <Advertisment image={Adv1s} width={950} adclass="adv-l" />
+        <Advertisment image={Adv2} width={720} adclass="adv-l" />
       </div>
       <Slider
         sectionTitle="VCCircle Premium"
@@ -405,6 +408,8 @@ function App() {
         cards={topNewsCards}
         class="vc-premium"
         cardClass="vcp-cards"
+        crown={true}
+        subscribeButton={true}
       />
       <RCwsa sectionTitle="Most Popular" cards={mostPopularCards} ad={Adv3} />
 
