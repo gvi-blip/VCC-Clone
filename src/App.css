@@ -8,6 +8,7 @@
 .container {
   width: 1140px;
   margin: 0 auto;
+  /* overflow: hidden; */
 }
 
 .mts {
@@ -124,6 +125,9 @@ nav button:hover {
   font-family: "Montserrat", sans-serif;
 }
 
+.adv p {
+  margin-top: 5px;
+}
 .adv-l {
   margin: 20px 0;
   padding: 5px 0;
@@ -138,7 +142,7 @@ nav button:hover {
 
 .adv-sp {
   width: 300px;
-  padding: 20px 5px 5px 5px;
+  padding: 1px 5px 5px 5px;
 }
 
 .adv-sp img {
@@ -403,9 +407,9 @@ nav button:hover {
 
 /* NEWSLETTER */
 .newsletter .container {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   background: #000000;
   padding: 1em;
@@ -418,13 +422,13 @@ nav button:hover {
   justify-content: space-between;
 }
 
-.newsletter .container div:first-of-type {
-  border: 1px solid black;
+.newsletter .container > div:first-of-type {
+  /* border: 1px solid white; */
   display: flex;
   align-items: center;
   width: 50%;
 }
-.newsletter .container div:nth-of-type(2) {
+.newsletter .container > div:nth-of-type(2) {
   width: 43%;
 }
 
@@ -475,7 +479,7 @@ nav button:hover {
   margin: 50px 0;
 }
 .more-stories-cards {
-  width: 49%;
+  width: 560px;
   display: flex;
   margin-bottom: 10px;
   padding-right: 50px;
@@ -499,7 +503,7 @@ nav button:hover {
 }
 
 .more-stories-cards .card-content {
-  color: #000000;
+  color: #222222;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -535,6 +539,7 @@ footer .other-links {
   width: 65%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 25px !important;
 }
 footer .other-links a {
@@ -552,6 +557,7 @@ footer .products {
   width: 60%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 25px !important;
 }
 

@@ -22,11 +22,14 @@ function Card(props) {
         >
           {props.content}
         </p>
-
-        <span className="card-date">{props.date}</span>
-        {props.address ? null : <span className="middot">&middot;</span>}
-        <span className="card-author">{props.author}</span>
-        {props.address ? <p className="card-address">{props.address}</p> : null}
+        <p>
+          <span className="card-date">{props.date}</span>
+          {props.address ? null : <span className="middot">&middot;</span>}
+          <span className="card-author">{props.author}</span>
+          {props.address ? (
+            <p className="card-address">{props.address}</p>
+          ) : null}
+        </p>
       </div>
     </div>
   );

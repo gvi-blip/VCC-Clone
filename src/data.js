@@ -218,7 +218,9 @@ const moreStoriesCards = [
     author: "Madhurima Nandy",
   },
   {
-    adv: <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />,
+    adv: (
+      <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
+    ),
   },
   {
     title: "CONSUMER",
@@ -548,6 +550,34 @@ const mergAcqCards = [
 ];
 
 const finCards = [
+  {
+    image: "./images/Financials/1.png",
+    content:
+      "Omicron poses limited downside to Indian economy, say economists - Reuters Poll",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/2.png",
+    content:
+      "Kalaari Capital, others back community investment platform threedots",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/3.png",
+    content:
+      "Creator economy firm AppX, education planning platform EduFund secure capital",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
+  {
+    image: "./images/Financials/4.png",
+    content:
+      "ADB returns as limited partner for Creador’s fifth Southeast Asia focused fund",
+    date: "30 Sep",
+    author: "Madhurima Nandy",
+  },
   {
     image: "./images/Financials/1.png",
     content:

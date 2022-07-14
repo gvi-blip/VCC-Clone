@@ -35,7 +35,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <Advertisment image={"./Adv1s.png"} width={950} adclass="adv-l" />
+        <Advertisment image={"./Adv1s.png"} adclass="adv-l advl1" />
       </div>
       <section className="top-news">
         <div className="container">
@@ -83,7 +83,7 @@ function App() {
         </div>
       </section>
       <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />
+        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
       <RCwsa
         sectionTitle="Editor's Pick"
@@ -134,7 +134,7 @@ function App() {
         cardContClass="check"
       />
       <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />
+        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
       <Slider
         sectionTitle="VCCircle Premium"
@@ -159,7 +159,7 @@ function App() {
         cardContClass="check"
       />
       <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />
+        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
       <RCwsa
         sectionTitle="Most Popular"
@@ -169,7 +169,7 @@ function App() {
       />
 
       <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />
+        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
       <VCCTV
         url="https://www.youtube.com/embed/THL1OPn72vo"
@@ -187,15 +187,17 @@ function App() {
         <div className="container">
           <div className="mts">
             <img src={require("./images/envelope.png")} alt="Envelope icon" />
-
-            <p
-              style={{
-                fontSize: "20px",
-                fontWeight: "regular",
-                color: "#FFFFFFD8",
-              }}
-            >
-              Get industry update with our daily newsletter
+            <div className="text">
+              <p
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "regular",
+                  color: "#FFFFFFD8",
+                  lineHeight: "26px",
+                }}
+              >
+                Get industry update with our daily newsletter
+              </p>
               <p
                 style={{
                   fontSize: "18px",
@@ -205,7 +207,7 @@ function App() {
               >
                 Subscribe Now !
               </p>
-            </p>
+            </div>
           </div>
           <div>
             <form action="/" name="form1" onSubmit={onSubmitHandler}>
@@ -233,7 +235,7 @@ function App() {
         cardContClass="check"
       />
       <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l" />
+        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
       <Slider
         sectionTitle="Mergers and Acquisitions"
