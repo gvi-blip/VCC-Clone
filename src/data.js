@@ -671,46 +671,55 @@ const founderCards = [
 
 const upEvCards = [
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/1.png",
     title: "Limited Partners Summit 2022",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/2.png",
     title: "Cloud- The Digital Infrastructure",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/3.png",
     title: "FUTURE OF TRUST",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/1.png",
     title: "Limited Partners Summit 2022",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/2.png",
     title: "Cloud- The Digital Infrastructure",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/3.png",
     title: "FUTURE OF TRUST",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/1.png",
     title: "Limited Partners Summit 2022",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/2.png",
     title: "Cloud- The Digital Infrastructure",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",
   },
   {
+    eventDate: "4th October,2021",
     image: "./images/UpcomingEvents/3.png",
     title: "FUTURE OF TRUST",
     address: "Hyatt Regency, New Delhi | New Hybrid Masterclass.",

@@ -11,6 +11,9 @@
   /* overflow: hidden; */
 }
 
+.socials {
+  display: none;
+}
 .mts {
   font-family: "Montserrat", sans-serif;
 }
@@ -774,6 +777,13 @@ footer p {
   border-bottom: 1px solid #e2e2e2;
   padding-bottom: 50px;
 }
+
+.up-ev-cards .card-eventdate {
+  display: none;
+  color: #096ffa;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
 .up-ev .title {
   margin: 40px 0;
 }
@@ -786,7 +796,7 @@ footer p {
 }
 
 .up-ev-cards .card-image-cont {
-  width: 170px;
+  width: 160px;
   margin-right: 10px;
 }
 .up-ev-cards .card-image-cont img {
@@ -794,10 +804,11 @@ footer p {
 }
 
 .up-ev-cards .card-title {
-  width: 240px;
+  width: 250px;
   font-weight: 700;
   font-size: 18px;
-  margin: 10px 0 !important;
+  margin: 5px 0 !important;
+  height: 55px;
 }
 
 .up-ev-cards .card-address {

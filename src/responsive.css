@@ -108,6 +108,31 @@
   .sac-card-cont {
     justify-content: flex-start !important;
   }
+
+  .up-ev .cards {
+    /* border: 1px solid black; */
+    flex-direction: column;
+  }
+
+  .up-ev-cards {
+    margin: 20px 0px !important;
+    /* border: 1px solid black; */
+  }
+  .up-ev-cards .card-eventdate {
+    display: block !important;
+    margin-bottom: 5px;
+  }
+  .up-ev-cards .card-title {
+    margin: 5px 0px !important;
+    height: 45px;
+  }
+  .slider-comp .shadow {
+    display: none;
+  }
+
+  .slider-comp button {
+    display: none;
+  }
   .vcctv .container {
     border-right: none;
     border-left: none;
@@ -217,6 +242,27 @@
     overflow: hidden;
     line-height: 15px;
   }
+
+  .up-ev-cards .card-title {
+    font-size: 14px;
+    width: 80%;
+    margin: 0px !important;
+    height: 45px;
+    line-height: 20px;
+  }
+  .up-ev-cards .card-eventdate {
+    font-size: 12px;
+  }
+
+  .up-ev-cards .card-address {
+    font-size: 10px;
+  }
+  .up-ev-cards .card-image-cont {
+    width: 120px;
+  }
+  .up-ev-cards .card-image-cont img {
+    width: 120px !important;
+  }
   .more-stories-cards .card-title {
     font-size: 10px !important;
     letter-spacing: 1px !important;
@@ -240,6 +286,13 @@
     font-size: 8px !important;
     height: 20px;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 350px) {
+  .up-ev-cards .card-title {
+    width: 100%;
+    margin: 0px !important;
   }
 }
 @media (min-width: 576px) {
@@ -612,6 +665,10 @@
   }
   .more-stories-cards {
     width: 49%;
+  }
+
+  .more-stories-cards .card-image-cont img {
+    width: 240px;
   }
   .more-stories-cards .card-title {
     font-size: 14px;

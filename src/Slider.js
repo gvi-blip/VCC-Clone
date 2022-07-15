@@ -57,6 +57,7 @@ function Slider(props) {
                 premium={card.premium}
                 cardContClass={props.cardContClass}
                 address={card.address}
+                eventDate={card.eventDate}
               />
             );
           })}

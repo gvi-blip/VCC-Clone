@@ -13,6 +13,9 @@ function Card(props) {
         {props.premium ? <div className="premium-tag">PREMIUM</div> : ""}
       </div>
       <div>
+        {props.eventDate ? (
+          <p className="card-eventdate">{props.eventDate}</p>
+        ) : null}
         {props.title ? <p className="card-title">{props.title}</p> : null}
         <p
           className={
