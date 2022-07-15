@@ -847,6 +847,7 @@
 
   .socials .container > div:first-of-type {
     width: 375px;
+    height: 400px;
   }
   .socials .container > div:nth-of-type(2) {
     width: 442px;
@@ -914,6 +915,7 @@
 
   .socials .container > div:first-of-type {
     width: 420px;
+    height: 450px;
   }
   .socials .container > div:nth-of-type(2) {
     width: 485px;
