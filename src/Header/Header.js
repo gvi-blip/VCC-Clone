@@ -6,7 +6,10 @@ function Header() {
     <>
       <header className="header">
         <div className="container">
-          <img src={Logo} alt="VCCircle Logo" height="45" width="140" />
+          <div className="logo-cont">
+            <i className="fa-solid fa-bars i-ham"></i>
+            <img src={Logo} alt="VCCircle Logo" height="45" width="140" />
+          </div>
           <div className="links">
             <a href="/" className="mts">
               <img

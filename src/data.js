@@ -75,6 +75,7 @@ const mostPopularCards = [
       "Quick commerce deliveries surge 500% in a year, says logistics provider Shadowfax",
     date: "30 September",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     title: "CONSUMER",
@@ -184,6 +185,7 @@ const moreStoriesCards = [
       "GLOBAL MARKETS - Asia shares fall as Treasury yields hit fresh highs",
     date: "30 Sep",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     title: "CONSUMER",
@@ -200,6 +202,7 @@ const moreStoriesCards = [
       "Kotak’s asset arm, others lead $6 mn bet on cancer detection platform Epigeneres",
     date: "30 Sep",
     author: "Madhurima Nandy,Madhurima Nandy",
+    premium: true,
   },
   {
     title: "PEOPLE",
@@ -216,6 +219,7 @@ const moreStoriesCards = [
       "Actis in talks to acquire Welspun group’s roads for up to Rs 10,000 cr",
     date: "30 Sep",
     author: "Madhurima Nandy",
+    premium: true,
   },
   {
     adv: (

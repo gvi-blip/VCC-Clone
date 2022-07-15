@@ -11,9 +11,9 @@
   /* overflow: hidden; */
 }
 
-.socials {
+/* .socials {
   display: none;
-}
+} */
 .mts {
   font-family: "Montserrat", sans-serif;
 }
@@ -52,6 +52,10 @@ button:hover {
   z-index: 4;
 }
 /* Header */
+
+.i-ham {
+  display: none;
+}
 
 header .container {
   display: flex;
@@ -370,8 +374,6 @@ nav button:hover {
 .rcwsa-cards-s .card-content {
   margin-bottom: 10px;
   line-height: 20px;
-}
-.rcwsa-cards-s .card-content {
   font-size: 14px;
   font-weight: 500;
 }
@@ -646,6 +648,7 @@ footer p {
   right: 0;
   top: 20%;
   width: 120px;
+  /* opacity: 0.5; */
 }
 
 .limited-partner .container {
@@ -701,6 +704,7 @@ footer p {
   border-radius: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  border: none;
 }
 
 .vc-premium .shadow {
@@ -816,6 +820,9 @@ footer p {
   font-weight: 500;
 }
 
+.up-ev .shadow {
+  height: 200px;
+}
 /* Founders Section*/
 .fn .container {
   margin-bottom: 50px;

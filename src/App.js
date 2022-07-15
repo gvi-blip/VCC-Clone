@@ -268,6 +268,7 @@ function App() {
                   author={card.author}
                   date={card.date}
                   content={card.content}
+                  premium={card.premium}
                 />
               );
             })}
