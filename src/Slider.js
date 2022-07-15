@@ -4,15 +4,15 @@ import Right from "./images/Right-arrow.svg";
 
 function Slider(props) {
   const rowRef = useRef(null);
-  const handleClick = (direction: any) => {
-    if (rowRef.current) {
-      const { scrollLeft, clientWidth } = rowRef.current;
+  // const handleClick = (direction: any) => {
+  //   if (rowRef.current) {
+  //     const { scrollLeft, clientWidth } = rowRef.current;
 
-      const scrollTo =
-        direction === 1 ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
-    }
-  };
+  //     const scrollTo =
+  //       direction === 1 ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+  //     rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+  //   }
+  // };
 
   const scroll = (scrollOffset) => {
     rowRef.current.scrollLeft += scrollOffset;

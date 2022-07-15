@@ -402,19 +402,14 @@
   }
   .socials .container > div:first-of-type {
     width: 80%;
-    border-right: none;
-    border-bottom: 1px solid #eeeeee;
+
     height: 500px;
   }
   .socials .container > div:first-of-type div {
     bottom: 93px;
     left: 6px;
   }
-  .socials .container > div:nth-of-type(2) {
-    width: 100%;
-    padding: 20px 0;
-    border-bottom: 1px solid #eeeeee;
-  }
+
   .socials .container > div:nth-of-type(2) img {
     width: 300px;
     margin-left: 120px;
@@ -483,47 +478,6 @@
     padding: 20px 0;
     border-bottom: 1px solid #eeeeee;
   }
-  /* .small-ad-comp {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 0px;
-  }
-  .sac-card-cont {
-    border-right: none;
-  }
-  .content {
-    order: 2;
-    margin-top: 50px;
-  }
-
-  .sac-card-cont {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .rcwsa-card-l {
-    margin-bottom: 30px;
-    margin-right: 0;
-    width: 100%;
-  }
-  .rcwsa-card-s {
-    margin-right: 0;
-    width: 100%;
-  }
-  .small-ad-comp {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 0px;
-  }
-  .small-ad-comp .adv-s {
-    margin: 30px 0;
-    width: 90%;
-    order: 1;
-  }
-
-  .sac-card-cont > div:nth-of-type(2) {
-    margin-bottom: 30px;
-  } */
 }
 
 @media (min-width: 768px) {
@@ -541,10 +495,7 @@
   .adv p {
     margin-top: 5px;
   }
-  /* .small-ad-comp {
-    flex-wrap: wrap;
-    justify-content: center;
-  } */
+
   .rcwsa-card-l {
     width: 280px;
   }
@@ -563,9 +514,7 @@
 
   .socials .container > div:first-of-type {
     width: 300px;
-    /* border: none; */
     height: 340px;
-    /* border-bottom: 1px solid #eeeeee; */
   }
   .socials .container > div:first-of-type div {
     bottom: 67px;
@@ -610,7 +559,6 @@
     margin: 8px 0;
   }
   .top-news .text-content p:nth-of-type(2) {
-    /* height: 50px; */
     font-size: 14px;
     overflow: hidden;
   }
@@ -624,16 +572,12 @@
   .top-news-cards .card-content {
     height: 100px;
     font-size: 16px;
-    /* border: 1px solid black; */
   }
   .top-news-cards .middot {
     margin: 5px;
   }
   .small-ad-comp .content {
-    /* border: 1px solid black; */
     margin-right: 15px;
-  }
-  .sac-card-cont {
   }
 
   .sac-card-cont > div {
@@ -685,7 +629,6 @@
   }
   .more-stories-cards .container > div {
     justify-content: center;
-    /* border: 1px solid black !important; */
   }
   .more-stories-cards {
     width: 60%;
@@ -698,7 +641,6 @@
     margin-bottom: 0px;
   }
   .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
-    /* border: 1px solid black; */
     height: 20px;
     overflow: hidden;
   }
@@ -733,7 +675,6 @@
   }
   .i-ham {
     display: inline;
-    /* border: 1px solid black; */
     height: 50px;
     font-size: 36px;
     padding: 5px 0;
@@ -776,11 +717,6 @@
     width: 49%;
     margin-right: 0px;
   }
-
-  /* .sac-card-cont {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  } */
 
   .rcwsa-card-l {
     margin-bottom: 30px;
@@ -843,7 +779,6 @@
 }
 @media (max-width: 1200px) {
   header .links a {
-    /* border: 1px solid black; */
     margin-left: 20px;
   }
 
@@ -908,7 +843,6 @@
   .more-stories-cards .card-content {
     margin-bottom: 0px;
     height: 70px;
-    /* line-height: 24px; */
   }
 
   .socials .container > div:first-of-type {
@@ -926,17 +860,6 @@
     bottom: 82px;
     left: 6px;
   }
-
-  /* .socials .container > div:nth-of-type(2) img {
-    width: 340px;
-    margin-left: 80px;
-  }
-  .socials .container > div:first-of-type div {
-    bottom: 90px;
-  }
-  .adv-sp {
-    width: 420px;
-  } */
 }
 @media (min-width: 1400px) {
   .container {
@@ -954,10 +877,6 @@
   .more-stories-cards .premium-tag {
     bottom: 10px;
   }
-
-  /* .small-ad-comp .adv-s {
-    width: 300px;
-  } */
 
   .sac-card-cont {
     width: 900px;
@@ -986,9 +905,7 @@
     width: 300px;
   }
   .top-news-cards .card-content {
-    /* height: 80px; */
     font-size: 18px;
-    /* border: 1px solid black; */
   }
   .more-stories-cards .card-content {
     margin-bottom: 13px;
@@ -1022,7 +939,6 @@
   .rcwsa-cards-s .card-content {
     font-size: 12px !important;
     height: 62px !important;
-    /* line-height: 22px; */
   }
 
   .rcwsa-cards-s .card-image-cont img {
@@ -1032,9 +948,6 @@
   .rcwsa-cards-s > div:nth-of-type(2) p:nth-of-type(3) span {
     font-size: 10px !important;
   }
-  /* .rcwsa-card-l .card-title {
-    margin: 0px;
-  } */
 }
 
 @media (max-width: 360px) {
