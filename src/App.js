@@ -118,11 +118,12 @@ function App() {
           </div>
           <div>
             <p className="mts">Infographic</p>
-
-            <img
-              src={require("./images/Socials/Infographic.png")}
-              alt="VCCircle Infographic"
-            ></img>
+            <div className="img-cont">
+              <img
+                src={require("./images/Socials/Infographic.png")}
+                alt="VCCircle Infographic"
+              ></img>
+            </div>
           </div>
           <div>
             <Advertisment image={"./Adv3.png"} adclass="adv-sp" />

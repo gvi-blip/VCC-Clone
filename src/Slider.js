@@ -4,19 +4,19 @@ import Right from "./images/Right-arrow.svg";
 
 function Slider(props) {
   const rowRef = useRef(null);
-  // const handleClick = (direction: any) => {
-  //   if (rowRef.current) {
-  //     const { scrollLeft, clientWidth } = rowRef.current;
+  const handleClick = (direction: any) => {
+    if (rowRef.current) {
+      const { scrollLeft, clientWidth } = rowRef.current;
 
-  //     const scrollTo =
-  //       direction === 1 ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-  //     rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
-  //   }
-  // };
+      const scrollTo =
+        direction === 1 ? scrollLeft - clientWidth : scrollLeft + clientWidth;
+      rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+    }
+  };
 
-  // const scroll = (scrollOffset) => {
-  //   rowRef.current.scrollLeft += scrollOffset;
-  // };
+  const scroll = (scrollOffset) => {
+    rowRef.current.scrollLeft += scrollOffset;
+  };
   return (
     <div className={"slider-comp " + props.class}>
       <div className="container">
@@ -66,7 +66,7 @@ function Slider(props) {
         {/* <button>
           <img src={Right} alt="Right arrow"></img>
         </button> */}
-        <button className="right-btn">
+        <button className="right-btn" onClick={() => scroll(350)}>
           <img src={Right} alt="Right arrow"></img>
         </button>
         <div className="shadow"></div>
