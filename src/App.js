@@ -123,6 +123,9 @@ function App() {
                 src={require("./images/Socials/Infographic.png")}
                 alt="VCCircle Infographic"
               ></img>
+              <div className="arrow">
+                <i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i>
+              </div>
             </div>
           </div>
           <div>
