@@ -125,7 +125,11 @@ function App() {
                 alt="VCCircle Infographic"
               ></img>
               <div className="arrow">
-                <i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i>
+                {/* <i class="fa-solid fa-arrow-up-right-and-arrow-down-left-from-center"></i> */}
+                <img
+                  src={require("./images/diagonal-arrows.png")}
+                  alt="diagonal-arrows"
+                ></img>
               </div>
             </div>
           </div>
@@ -256,6 +260,7 @@ function App() {
       </div>
       <Slider
         sectionTitle="Mergers and Acquisitions"
+        titleAbbreviation="M &#38; A"
         cards={mergAcqCards}
         class="mac"
         cardClass="mac-cards"

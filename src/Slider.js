@@ -1,9 +1,36 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Card from "./Card";
 import Right from "./images/Right-arrow.svg";
 
 function Slider(props) {
-  const rowRef = useRef(null);
+  const handleResize = () => {
+    if (props.titleAbbreviation) {
+      if (window.innerWidth < 576) {
+        // titleRef.current.classList.add("d-none");
+        titleRef.current.style.display = "none";
+      } else {
+        // titleRef.current.classList.remove("d-none");
+        titleRef.current.style.display = "block";
+      }
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    if (props.titleAbbreviation && window.innerWidth < 576) {
+      titleRef.current.classList.add("d-none");
+    }
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const titleRef = useRef();
+  const rightBtn = useRef();
+  const leftBtn = useRef();
+  const rowRef = useRef();
+  // const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
+  // console.log("m:" + m);
   // const handleClick = (direction: any) => {
   //   if (rowRef.current) {
   //     const { scrollLeft, clientWidth } = rowRef.current;
@@ -13,16 +40,43 @@ function Slider(props) {
   //     rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
   //   }
   // };
+  console.log(rowRef.curent);
 
+  function btnsDisplay() {
+    let m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
+    if (rowRef.current.scrollLeft === 0) {
+      leftBtn.current.style.display = "none";
+    }
+    if (rowRef.current.scrollLeft > 0) {
+      leftBtn.current.style.display = "block";
+    }
+    if (rowRef.current.scrollLeft > 0 && rowRef.current.scrollLeft < m) {
+      rightBtn.current.style.display = "block";
+    }
+
+    if (Math.round(rowRef.current.scrollLeft) === m) {
+      rightBtn.current.style.display = "none";
+    }
+  }
   const scroll = (scrollOffset) => {
     rowRef.current.scrollLeft += scrollOffset;
   };
+
   return (
     <div className={"slider-comp " + props.class}>
       <div className="container">
         <div className="title">
           <div style={{ display: "flex", alignItems: "center" }}>
-            <h2 style={{ marginRight: "10px" }}>{props.sectionTitle}</h2>
+            {props.titleAbbreviation ? (
+              <h2 className="title-abv">{props.titleAbbreviation}</h2>
+            ) : null}
+            <h2
+              style={{ marginRight: "10px" }}
+              ref={titleRef}
+              className="sect-title"
+            >
+              {props.sectionTitle}
+            </h2>
             {props.crown ? (
               <img
                 src={require("./images/Header/crown.png")}
@@ -44,7 +98,7 @@ function Slider(props) {
             </p>
           )}
         </div>
-        <div className="cards" ref={rowRef}>
+        <div className="cards" ref={rowRef} onScroll={btnsDisplay}>
           {props.cards.map((card) => {
             return (
               <Card
@@ -66,7 +120,17 @@ function Slider(props) {
         {/* <button>
           <img src={Right} alt="Right arrow"></img>
         </button> */}
-        <button className="right-btn" onClick={() => scroll(350)}>
+        <button className="left-btn" onClick={() => scroll(-350)} ref={leftBtn}>
+          <img
+            src={require("./images/chevron-left.png")}
+            alt="Left arrow"
+          ></img>
+        </button>
+        <button
+          className="right-btn"
+          onClick={() => scroll(350)}
+          ref={rightBtn}
+        >
           <img src={Right} alt="Right arrow"></img>
         </button>
         <div className="shadow"></div>
