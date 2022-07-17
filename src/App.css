@@ -391,7 +391,7 @@ nav button:hover {
 .socials .container > div:first-of-type img {
   width: 100%;
 }
-.socials .container > div:first-of-type div {
+/* .socials .container > div:first-of-type div {
   position: relative;
   left: 5px;
   bottom: 80px;
@@ -406,10 +406,25 @@ nav button:hover {
 
 .socials .container > div:first-of-type div p {
   margin-bottom: 5px;
+} */
+
+.socials .image-cont {
+  position: relative;
+  /* border: 1px solid black; */
+}
+.socials .image-cont .caption {
+  position: absolute;
+  border: 1px solid #e3e3e3;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 98.8%;
+  left: 5px;
+  padding: 10px;
+  z-index: -1;
 }
 .socials .container div:nth-of-type(2) {
   width: 500px;
-  /* padding-left: 25px; */
 }
 .socials .container div:nth-of-type(2) .img-cont {
   position: relative;

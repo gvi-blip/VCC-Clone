@@ -96,24 +96,25 @@ function App() {
       <section className="socials">
         <div className="container">
           <div>
-            <img
-              src={require("./images/Socials/Twitter.png")}
-              alt="VCCircle Twitter Handle"
-            ></img>
-            <div>
-              <p
-                style={{
-                  marginBottom: "5px",
-                  fontWeight: "700",
-                  color: "#888888",
-                }}
-              >
-                VCCircle.com
-              </p>
-              <p style={{ color: "#484848", fontWeight: "medium" }}>
-                World Bank arm IFC to double down its investments into funds in
-                2022
-              </p>
+            <div className="image-cont">
+              <img
+                src={require("./images/Socials/Twitter.png")}
+                alt="VCCircle Twitter Handle"
+              ></img>
+              <div className="caption">
+                <p
+                  style={{
+                    fontWeight: "700",
+                    color: "#888888",
+                  }}
+                >
+                  VCCircle.com
+                </p>
+                <p style={{ color: "#484848", fontWeight: "medium" }}>
+                  World Bank arm IFC to double down its investments into funds
+                  in 2022
+                </p>
+              </div>
             </div>
           </div>
           <div>
