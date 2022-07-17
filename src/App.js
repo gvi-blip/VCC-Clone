@@ -143,6 +143,9 @@ function App() {
       <div className="container">
         <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
       </div>
+      <div className="container ad-b-tn-2">
+        <Advertisment image={"./Adv3.png"} adclass="adv-s ad-b-tn " />
+      </div>
       <Slider
         sectionTitle="VCCircle Premium"
         titleImg="./path"
@@ -177,6 +180,9 @@ function App() {
 
       <div className="container">
         <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
+      </div>
+      <div className="container ad-b-tn-2">
+        <Advertisment image={"./Adv3.png"} adclass="adv-s ad-b-tn " />
       </div>
       <VCCTV
         url="https://www.youtube.com/embed/THL1OPn72vo"
@@ -243,6 +249,9 @@ function App() {
       />
       <div className="container">
         <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
+      </div>
+      <div className="container ad-b-tn-2">
+        <Advertisment image={"./Adv3.png"} adclass="adv-s ad-b-tn " />
       </div>
       <Slider
         sectionTitle="Mergers and Acquisitions"

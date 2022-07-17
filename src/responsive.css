@@ -542,10 +542,9 @@
     display: none;
   }
   .vcctv .container {
-    border-right: none;
-    border-left: none;
-    border-bottom: none;
-    border-top: 1px solid #e2e2e2;
+    border: none;
+    /* border-top: 1px solid #e2e2e2; */
+    margin-top: 10px;
     border-radius: 0px;
     margin-bottom: 25px;
     padding: 20px 0 0 0;
@@ -625,6 +624,64 @@
 
   .socials .adv-sp {
     margin: 20px 0;
+  }
+
+  .ad-b-tn-2 {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .up-ev .title {
+    margin: 10px 0 0 0;
+  }
+
+  .up-ev .container {
+    padding-bottom: 20px;
+  }
+
+  .fn .title {
+    margin: 30px 0 20px 0;
+  }
+
+  .fn .container {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .tmt .title {
+    margin: 20px 0 20px 0;
+  }
+
+  .tmt .container {
+    padding-top: 0;
+  }
+
+  .tc .title {
+    margin: 30px 0 20px 0;
+  }
+
+  .tc .container {
+    margin-bottom: 20px;
+  }
+  .mac {
+    margin: 30px auto;
+  }
+
+  .mac .container {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+  }
+  .mac .title {
+    margin: 0px 0 20px 0;
+  }
+
+  .fin {
+    display: none;
+  }
+
+  .more-stories .container {
+    padding-top: 0px !important;
   }
 }
 @media (max-width: 450px) {
@@ -880,8 +937,15 @@
 
   .socials .container {
     padding-top: 30px;
+    padding-bottom: 5px;
   }
 
+  .limited-partner .container {
+    margin-bottom: 30px;
+  }
+  .limited-partner .title {
+    margin-bottom: 20px;
+  }
   .socials .container > div:first-of-type {
     border-right: none;
     border-bottom: 1px solid #eeeeee;
@@ -1088,8 +1152,8 @@
 
   .content {
     order: 2;
-    margin-top: 10px;
-    padding-top: 30px;
+    margin-top: 15px;
+    padding-top: 35px;
     border-top: 1px solid #eeeeee;
     /* width: 100%; */
   }
@@ -1155,9 +1219,9 @@
     justify-content: center;
   }
 
-  /* .more-stories .container > div {
-    flex-wrap: wrap;
-  } */
+  .vcctv .container {
+    margin-top: 20px;
+  }
   .more-stories .container > div {
     justify-content: flex-start !important;
   }
