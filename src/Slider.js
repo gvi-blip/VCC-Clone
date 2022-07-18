@@ -28,6 +28,7 @@ function Slider(props) {
   const titleRef = useRef();
   const rightBtn = useRef();
   const leftBtn = useRef();
+  const shadowRef = useRef();
   const rowRef = useRef();
   // const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
   // console.log("m:" + m);
@@ -45,16 +46,23 @@ function Slider(props) {
     let m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
     if (rowRef.current.scrollLeft === 0) {
       leftBtn.current.style.display = "none";
+      // shadowRef.current.style.display = "block";
+      shadowRef.current.classList.remove("d-none");
     }
     if (rowRef.current.scrollLeft > 0) {
       leftBtn.current.style.display = "block";
     }
     if (rowRef.current.scrollLeft > 0 && rowRef.current.scrollLeft < m) {
       rightBtn.current.style.display = "block";
+      // shadowRef.current.style.display = "block";
+      shadowRef.current.classList.remove("d-none");
     }
 
     if (Math.round(rowRef.current.scrollLeft) === m) {
       rightBtn.current.style.display = "none";
+      console.log(shadowRef.current);
+      // shadowRef.current.style.display = "none";
+      shadowRef.current.classList.add("d-none");
     }
   }
   const scroll = (scrollOffset) => {
@@ -140,7 +148,7 @@ function Slider(props) {
         >
           <img src={Right} alt="Right arrow"></img>
         </button>
-        <div className="shadow"></div>
+        <div className="shadow" ref={shadowRef}></div>
       </div>
     </div>
   );

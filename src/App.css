@@ -234,6 +234,7 @@ nav button:hover {
 .image img {
   width: 100%;
 }
+
 /* Top News Cards */
 .tn-cards-cont .container {
   /* border: 1px solid black; */
@@ -395,26 +396,9 @@ nav button:hover {
 .socials .container > div:first-of-type img {
   width: 100%;
 }
-/* .socials .container > div:first-of-type div {
-  position: relative;
-  left: 5px;
-  bottom: 80px;
-  border: 1px solid #e3e3e3;
-  border-radius: 10px;
-  width: 98.7%;
-  z-index: -1;
-  font-size: 12px;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.socials .container > div:first-of-type div p {
-  margin-bottom: 5px;
-} */
 
 .socials .image-cont {
   position: relative;
-  /* border: 1px solid black; */
 }
 .socials .image-cont .caption {
   position: absolute;
@@ -704,8 +688,8 @@ footer p {
   display: none;
 }
 .slider-comp .left-btn img {
-  height: 22px;
-  width: 22px;
+  height: 20px;
+  width: 20px;
 }
 .slider-comp .shadow {
   background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
@@ -717,10 +701,21 @@ footer p {
   top: 20%;
   width: 120px;
 }
+.d-none {
+  transition: 1s ease;
+  display: none !important;
+}
 
+.slider-comp .card-image-cont img {
+  /* width: 100%; */
+}
 .limited-partner .container {
   border-top: 1px solid #e3e3e3;
   margin-bottom: 50px;
+}
+.limited-partner .container .shadow,
+.fn .container .shadow {
+  height: 280px;
 }
 
 .lp-cards {
@@ -733,10 +728,6 @@ footer p {
 .lp-cards .card-content {
   color: #222222;
 }
-
-/* .lp-cards + .lp-cards {
-  margin-left: 25px;
-} */
 
 .vc-premium {
   background: black;
@@ -751,7 +742,8 @@ footer p {
   padding: 1px 0 25px 0;
 }
 
-.vc-premium .container .right-btn {
+.vc-premium .container .right-btn,
+.vc-premium .container .left-btn {
   top: 53%;
 }
 
@@ -781,7 +773,7 @@ footer p {
     0% no-repeat padding-box;
   position: absolute;
   z-index: 1;
-  height: 340px;
+  height: 360px;
   right: -10px;
   top: 20%;
   width: 180px;
@@ -900,6 +892,11 @@ footer p {
   margin-bottom: 50px;
 }
 
+.fn-cards {
+  border: 1px solid #ededed;
+  padding: 10px;
+  border-radius: 8px;
+}
 /* Mergers and Acquisitions section */
 .mac {
   margin: 50px 0;
