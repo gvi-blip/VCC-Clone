@@ -612,6 +612,10 @@
   .vcp-cards .card-image-cont img {
     width: 100%;
   }
+
+  .slider-comp .title h2 {
+    font-size: 18px;
+  }
 }
 @media (max-width: 450px) {
   .top-news .text-content button {
@@ -667,9 +671,10 @@
 
   .up-ev-cards .card-title {
     font-size: 14px;
-    width: 80%;
+    width: 90%;
     margin: 0px !important;
     height: 45px;
+    /* overflow: hidden; */
     line-height: 20px;
   }
   .up-ev-cards .card-eventdate {
@@ -1421,6 +1426,10 @@
   .tc .right-btn {
     top: 62%;
   }
+
+  .socials .container .adv-sp {
+    width: 322px;
+  }
 }
 @media (min-width: 1400px) {
   .container {
@@ -1573,6 +1582,21 @@
 
   .fin .right-btn,
   .fin .left-btn {
+  }
+  .small-ad-comp .adv-s {
+    width: 345px;
+  }
+
+  .rcwsa-card-l {
+    width: 430px;
+  }
+
+  .rcwsa-cards-s {
+    padding: 25px 0;
+  }
+
+  .socials .container .adv-sp {
+    width: 420px;
   }
 }
 @media (max-width: 450px) {
