@@ -1,10 +1,12 @@
-import React from "react";
 import Advertisment from "./Advertisment/Advertisment";
 import Card from "./Card";
 function RCwsa(props) {
+  const { sectionClass, sectionTitle, cards, ad } = props;
   return (
     <div className="container">
-      <section className={"small-ad-comp " + props.class}>
+      <section
+        className={"small-ad-comp " + (sectionClass ? sectionClass : null)}
+      >
         <div className="content">
           <h2
             className="mts"
@@ -13,27 +15,27 @@ function RCwsa(props) {
               fontWeight: "bold",
             }}
           >
-            {props.sectionTitle}
+            {sectionTitle}
           </h2>
           <div className="sac-card-cont">
             <div>
               <Card
-                class="rcwsa-card-l"
-                image={props.cards[0].image}
-                title={props.cards[0].title}
-                author={props.cards[0].author}
-                date={props.cards[0].date}
-                content={props.cards[0].content}
+                cardClass="rcwsa-card-l"
+                image={cards[0].image}
+                title={cards[0].title}
+                author={cards[0].author}
+                date={cards[0].date}
+                content={cards[0].content}
               />
             </div>
             <div>
-              {props.cards.map((card, index) => {
+              {cards.map((card, index) => {
                 if (index === 0) {
                   return null;
                 }
                 return (
                   <Card
-                    class="rcwsa-cards-s"
+                    cardClass="rcwsa-cards-s"
                     image={card.image}
                     title={card.title}
                     author={card.author}
@@ -45,7 +47,7 @@ function RCwsa(props) {
             </div>
           </div>
         </div>
-        <Advertisment image={props.ad} adclass="adv-s" />
+        <Advertisment image={ad} adclass="adv-s" />
       </section>
     </div>
   );

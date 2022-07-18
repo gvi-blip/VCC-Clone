@@ -3,25 +3,34 @@ import Card from "./Card";
 import Right from "./images/Right-arrow.svg";
 
 function Slider(props) {
+  const {
+    titleAbbreviation,
+    sliderClass,
+    subscribeButton,
+    crown,
+    cards,
+    cardClass,
+    cardContClass,
+  } = props;
   const handleResize = useCallback(() => {
-    if (props.titleAbbreviation) {
+    if (titleAbbreviation) {
       if (window.innerWidth < 576) {
         titleRef.current.style.display = "none";
       } else {
         titleRef.current.style.display = "block";
       }
     }
-  }, [props.titleAbbreviation]);
+  }, [titleAbbreviation]);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    if (props.titleAbbreviation && window.innerWidth < 576) {
+    if (titleAbbreviation && window.innerWidth < 576) {
       titleRef.current.classList.add("d-none");
     }
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [handleResize, props.titleAbbreviation]);
+  }, [handleResize, titleAbbreviation]);
 
   const titleRef = useRef();
   const rightBtn = useRef();
@@ -41,22 +50,22 @@ function Slider(props) {
   // };
 
   function btnsDisplay() {
-    let m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
-    if (rowRef.current.scrollLeft === 0) {
+    const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
+    const scrollLeft = rowRef.current.scrollLeft;
+    if (scrollLeft === 0) {
       leftBtn.current.style.display = "none";
       shadowRef.current.classList.remove("d-none");
     }
-    if (rowRef.current.scrollLeft > 0) {
+    if (scrollLeft > 0) {
       leftBtn.current.style.display = "block";
     }
-    if (rowRef.current.scrollLeft > 0 && rowRef.current.scrollLeft < m) {
+    if (scrollLeft > 0 && scrollLeft < m) {
       rightBtn.current.style.display = "block";
       shadowRef.current.classList.remove("d-none");
     }
 
-    if (Math.round(rowRef.current.scrollLeft) === m) {
+    if (Math.round(scrollLeft) === m) {
       rightBtn.current.style.display = "none";
-      console.log(shadowRef.current);
       shadowRef.current.classList.add("d-none");
     }
   }
@@ -65,12 +74,12 @@ function Slider(props) {
   };
 
   return (
-    <div className={"slider-comp " + props.class}>
+    <div className={"slider-comp " + sliderClass}>
       <div className="container">
         <div className="title">
           <div style={{ display: "flex", alignItems: "center" }}>
-            {props.titleAbbreviation ? (
-              <h2 className="title-abv">{props.titleAbbreviation}</h2>
+            {titleAbbreviation ? (
+              <h2 className="title-abv">{titleAbbreviation}</h2>
             ) : null}
             <h2
               style={{ marginRight: "10px" }}
@@ -79,7 +88,7 @@ function Slider(props) {
             >
               {props.sectionTitle}
             </h2>
-            {props.crown ? (
+            {crown ? (
               <img
                 src={require("./images/Header/crown.png")}
                 alt="Crown"
@@ -88,7 +97,7 @@ function Slider(props) {
               />
             ) : null}
           </div>
-          {props.subscribeButton ? (
+          {subscribeButton ? (
             <button>SUBSCRIBE</button>
           ) : (
             <p className="mts">
@@ -109,27 +118,24 @@ function Slider(props) {
             }
           }}
         >
-          {props.cards.map((card) => {
+          {cards.map((card) => {
             return (
               <Card
-                class={props.cardClass}
+                cardClass={cardClass}
                 image={card.image}
                 title={card.title}
                 author={card.author}
                 date={card.date}
                 content={card.content}
                 premium={card.premium}
-                cardContClass={props.cardContClass}
+                cardContClass={cardContClass}
                 address={card.address}
                 eventDate={card.eventDate}
               />
             );
           })}
         </div>
-        {/* <div onClick={() => scroll(350)}>lhjgjkjgklkjn</div> */}
-        {/* <button>
-          <img src={Right} alt="Right arrow"></img>
-        </button> */}
+
         <button className="left-btn" onClick={() => scroll(-350)} ref={leftBtn}>
           <img
             src={require("./images/chevron-left.png")}

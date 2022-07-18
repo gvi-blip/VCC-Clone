@@ -1,39 +1,48 @@
 import React from "react";
 
 function Card(props) {
+  const {
+    cardClass,
+    image,
+    alt,
+    height,
+    width,
+    premium,
+    eventDate,
+    title,
+    cardContClass,
+    content,
+    date,
+    address,
+    author,
+  } = props;
   return (
-    <div className={"card " + props.class}>
+    <div className={"card " + cardClass}>
       <div className="card-image-cont">
         <img
-          src={require(`${props.image}`)}
-          alt={props.alt}
-          height={`${props.height ? props.height : ""}`}
-          width={`${props.width ? props.width : ""}`}
+          src={require(`${image}`)}
+          alt={alt}
+          height={`${height ? height : ""}`}
+          width={`${width ? width : ""}`}
         />
-        {props.premium ? <div className="premium-tag">PREMIUM</div> : ""}
+        {premium ? <div className="premium-tag">PREMIUM</div> : ""}
       </div>
       <div>
-        {props.eventDate ? (
-          <p className="card-eventdate">{props.eventDate}</p>
-        ) : null}
-        {props.title ? <p className="card-title">{props.title}</p> : null}
+        {eventDate ? <p className="card-eventdate">{eventDate}</p> : null}
+        {title ? <p className="card-title">{title}</p> : null}
         <p
-          className={
-            "card-content mts " +
-            (props.cardContClass ? props.cardContClass : "")
-          }
+          className={"card-content mts " + (cardContClass ? cardContClass : "")}
         >
-          {props.content}
+          {content}
         </p>
         <p>
-          <span className="card-date">{props.date}</span>
-          {props.address ? null : <span className="middot">&middot;</span>}
-          <span className="card-author">{props.author}</span>
-          {props.address ? (
-            <p className="card-address">{props.address}</p>
-          ) : null}
+          <span className="card-date">{date}</span>
+          {address ? null : <span className="middot">&middot;</span>}
+          <span className="card-author">{author}</span>
+          {address ? <p className="card-address">{address}</p> : null}
         </p>
       </div>
+      <div className="card-shadow"></div>
     </div>
   );
 }

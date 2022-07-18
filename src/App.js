@@ -73,7 +73,7 @@ function App() {
           {topNewsCards.map((card) => {
             return (
               <Card
-                class="top-news-cards"
+                cardClass={"top-news-cards"}
                 image={card.image}
                 title={card.title}
                 author={card.author}
@@ -141,7 +141,7 @@ function App() {
       <Slider
         sectionTitle="Limited Partner"
         cards={LPcardscontent}
-        class="limited-partner"
+        sliderClass="limited-partner"
         cardClass="lp-cards"
         cardContClass="check"
       />
@@ -155,7 +155,7 @@ function App() {
         sectionTitle="VCCircle Premium"
         titleImg="./path"
         cards={vcPremiumCards}
-        class="vc-premium"
+        sliderClass="vc-premium"
         cardClass="vcp-cards"
         crown={true}
         subscribeButton={true}
@@ -163,13 +163,13 @@ function App() {
       <Slider
         sectionTitle="Upcoming Events"
         cards={upEvCards}
-        class="up-ev"
+        sliderClass="up-ev"
         cardClass="up-ev-cards"
       />
       <Slider
         sectionTitle="Founders"
         cards={founderCards}
-        class="fn"
+        sliderClass="fn"
         cardClass="fn-cards"
         cardContClass="check"
       />
@@ -197,7 +197,7 @@ function App() {
       <Slider
         sectionTitle="TMT"
         cards={tmtCards}
-        class="tmt"
+        sliderClass="tmt"
         cardClass="tmt-cards"
         cardContClass="check"
       />
@@ -248,7 +248,7 @@ function App() {
       <Slider
         sectionTitle="Tech Circle"
         cards={tcCards}
-        class="tc"
+        sliderClass="tc"
         cardClass="tc-cards"
         cardContClass="check"
       />
@@ -262,14 +262,14 @@ function App() {
         sectionTitle="Mergers and Acquisitions"
         titleAbbreviation="M &#38; A"
         cards={mergAcqCards}
-        class="mac"
+        sliderClass="mac"
         cardClass="mac-cards"
         cardContClass="check"
       />
       <Slider
         sectionTitle="Financials"
         cards={finCards}
-        class="fin"
+        sliderClass="fin"
         cardClass="fin-cards"
         cardContClass="check"
       />
@@ -281,7 +281,7 @@ function App() {
               if (card.adv) return card.adv;
               return (
                 <Card
-                  class="more-stories-cards"
+                  cardClass="more-stories-cards"
                   image={card.image}
                   title={card.title}
                   author={card.author}
