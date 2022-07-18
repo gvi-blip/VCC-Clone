@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import Card from "./Card";
 import Right from "./images/Right-arrow.svg";
 
