@@ -6,10 +6,8 @@ function Slider(props) {
   const handleResize = useCallback(() => {
     if (props.titleAbbreviation) {
       if (window.innerWidth < 576) {
-        // titleRef.current.classList.add("d-none");
         titleRef.current.style.display = "none";
       } else {
-        // titleRef.current.classList.remove("d-none");
         titleRef.current.style.display = "block";
       }
     }
@@ -46,7 +44,6 @@ function Slider(props) {
     let m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
     if (rowRef.current.scrollLeft === 0) {
       leftBtn.current.style.display = "none";
-      // shadowRef.current.style.display = "block";
       shadowRef.current.classList.remove("d-none");
     }
     if (rowRef.current.scrollLeft > 0) {
@@ -54,14 +51,12 @@ function Slider(props) {
     }
     if (rowRef.current.scrollLeft > 0 && rowRef.current.scrollLeft < m) {
       rightBtn.current.style.display = "block";
-      // shadowRef.current.style.display = "block";
       shadowRef.current.classList.remove("d-none");
     }
 
     if (Math.round(rowRef.current.scrollLeft) === m) {
       rightBtn.current.style.display = "none";
       console.log(shadowRef.current);
-      // shadowRef.current.style.display = "none";
       shadowRef.current.classList.add("d-none");
     }
   }
