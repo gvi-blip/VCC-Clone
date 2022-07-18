@@ -40,7 +40,6 @@ function Slider(props) {
   //     rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
   //   }
   // };
-  console.log(rowRef.curent);
 
   function btnsDisplay() {
     let m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
@@ -98,7 +97,15 @@ function Slider(props) {
             </p>
           )}
         </div>
-        <div className="cards" ref={rowRef} onScroll={btnsDisplay}>
+        <div
+          className="cards"
+          ref={rowRef}
+          onScroll={() => {
+            if (window.innerWidth > 576) {
+              btnsDisplay();
+            }
+          }}
+        >
           {props.cards.map((card) => {
             return (
               <Card

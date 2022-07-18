@@ -475,6 +475,10 @@
     width: 85% !important;
   }
 
+  .slider-comp .right-btn {
+    display: none !important;
+  }
+
   .top-news .container {
     border-bottom: 1px solid #eeeeee;
   }
