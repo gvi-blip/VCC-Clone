@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../images/Header/Logo.png";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const [bodyOverflow, setBodyOverflow] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = bodyOverflow ? "hidden" : "auto";
+  }, [bodyOverflow]);
+  console.log(showMenu);
   return (
     <>
       <div className={"menu-wrapper" + (showMenu ? " show" : "")}>
@@ -16,14 +21,15 @@ function Header() {
               className="close"
               onClick={() => {
                 setShowMenu(false);
+                setBodyOverflow(false);
               }}
             >
               <i className="fa-solid fa-xmark"></i>
             </div>
           </div>
-          <div class="menu-option mts">Home</div>
-          <div class="menu-option mts">Sign In</div>
-          <div class="menu-option mts">
+          <div className="menu-option mts">Home</div>
+          <div className="menu-option mts">Sign In</div>
+          <div className="menu-option mts">
             {" "}
             <p>
               <img
@@ -40,7 +46,7 @@ function Header() {
             Industry{" "}
             <i
               className="fa-solid fa-sort-down"
-              style={{ marginRight: "15px;" }}
+              style={{ marginRight: "5px" }}
             ></i>
           </div>
           <div className="menu-option mts">Stressed Assets</div>
@@ -53,13 +59,14 @@ function Header() {
           <div className="menu-option mts">VCC Mobile App</div>
         </div>
       </div>
-      <header className="header">
+      <header className={"header" + (showMenu ? " hp-static" : "")}>
         <div className="container">
           <div className="logo-cont">
             <i
               className="fa-solid fa-bars i-ham"
               onClick={() => {
                 setShowMenu(true);
+                setBodyOverflow(true);
               }}
             ></i>
             <img src={Logo} alt="VCCircle Logo" height="45" width="140" />

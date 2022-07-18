@@ -1220,6 +1220,11 @@
   header {
     box-shadow: 0px 5px 10px #00000014;
   }
+
+  .hp-static {
+    position: static;
+  }
+
   .logo-cont {
     display: flex;
   }
