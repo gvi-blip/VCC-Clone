@@ -293,11 +293,44 @@
   .vc-premium .shadow {
     height: 320px;
   }
-  .mac .right-btn {
-    top: 59%;
+  .limited-partner .right-btn,
+  .limited-partner .left-btn {
+    top: 195px;
   }
-  .tc .right-btn {
-    top: 59%;
+
+  .vc-premium .right-btn,
+  .vc-premium .left-btn {
+    top: 240px;
+  }
+
+  .up-ev .right-btn,
+  .up-ev .left-btn {
+    top: 115px;
+  }
+
+  .fn .right-btn,
+  .fn .left-btn {
+    top: 175px;
+  }
+
+  .tmt .right-btn,
+  .tmt .left-btn {
+    top: 240px;
+  }
+
+  .tc .right-btn,
+  .tc .left-btn {
+    top: 220px;
+  }
+
+  .mac .right-btn,
+  .mac .left-btn {
+    top: 185px;
+  }
+
+  .fin .left-btn,
+  .fin .right-btn {
+    top: 240px;
   }
 }
 @media (max-width: 576px) {
@@ -823,8 +856,44 @@
     height: 320px;
   }
 
-  .tc .right-btn {
-    top: 63%;
+  .limited-partner .right-btn,
+  .limited-partner .left-btn {
+    top: 245px;
+  }
+
+  .vc-premium .right-btn,
+  .vc-premium .left-btn {
+    top: 220px;
+  }
+
+  .up-ev .right-btn,
+  .up-ev .left-btn {
+    top: 115px;
+  }
+
+  .fn .right-btn,
+  .fn .left-btn {
+    top: 175px;
+  }
+
+  .tmt .right-btn,
+  .tmt .left-btn {
+    top: 220px;
+  }
+
+  .tc .right-btn,
+  .tc .left-btn {
+    top: 205px;
+  }
+
+  .mac .right-btn,
+  .mac .left-btn {
+    top: 165px;
+  }
+
+  .fin .left-btn,
+  .fin .right-btn {
+    top: 225px;
   }
 }
 
@@ -1104,9 +1173,44 @@
   .vc-premium .shadow {
     height: 350px;
   }
+  .limited-partner .right-btn,
+  .limited-partner .left-btn {
+    top: 242px;
+  }
 
-  .tc .right-btn {
-    top: 63%;
+  .vc-premium .right-btn,
+  .vc-premium .left-btn {
+    top: 265px;
+  }
+
+  .up-ev .right-btn,
+  .up-ev .left-btn {
+    top: 115px;
+  }
+
+  .fn .right-btn,
+  .fn .left-btn {
+    top: 175px;
+  }
+
+  .tmt .right-btn,
+  .tmt .left-btn {
+    top: 220px;
+  }
+
+  .tc .right-btn,
+  .tc .left-btn {
+    top: 205px;
+  }
+
+  .mac .right-btn,
+  .mac .left-btn {
+    top: 165px;
+  }
+
+  .fin .left-btn,
+  .fin .right-btn {
+    top: 225px;
   }
 }
 @media (max-width: 992px) {
@@ -1126,6 +1230,9 @@
     padding: 5px 0;
     margin-right: 15px;
     color: #454545;
+  }
+  .menu-wrapper {
+    display: block;
   }
   .adv-l {
     display: none;
@@ -1423,12 +1530,48 @@
     height: 350px;
   }
 
-  .tc .right-btn {
-    top: 62%;
-  }
-
   .socials .container .adv-sp {
     width: 322px;
+  }
+
+  .limited-partner .right-btn,
+  .limited-partner .left-btn {
+    top: 242px;
+  }
+
+  .vc-premium .right-btn,
+  .vc-premium .left-btn {
+    top: 245px;
+  }
+
+  .up-ev .right-btn,
+  .up-ev .left-btn {
+    top: 115px;
+  }
+
+  .fn .right-btn,
+  .fn .left-btn {
+    top: 175px;
+  }
+
+  .tmt .right-btn,
+  .tmt .left-btn {
+    top: 245px;
+  }
+
+  .tc .right-btn,
+  .tc .left-btn {
+    top: 225px;
+  }
+
+  .mac .right-btn,
+  .mac .left-btn {
+    top: 190px;
+  }
+
+  .fin .left-btn,
+  .fin .right-btn {
+    top: 250px;
   }
 }
 @media (min-width: 1400px) {
@@ -1576,12 +1719,38 @@
     height: 360px;
   }
 
-  .tc .right-btn {
-    top: 60%;
+  .limited-partner .right-btn,
+  .limited-partner .left-btn {
+    top: 238px;
+  }
+
+  .up-ev .right-btn,
+  .up-ev .left-btn {
+    top: 110px;
+  }
+
+  .tmt .right-btn,
+  .tmt .left-btn {
+    top: 230px;
+  }
+
+  .tc .right-btn,
+  .tc .left-btn {
+    top: 215px;
+  }
+  .fn .right-btn,
+  .left-btn {
+    top: 198px;
   }
 
   .fin .right-btn,
   .fin .left-btn {
+    top: 235px;
+  }
+
+  .vc-premium .right-btn,
+  .vc-premium .left-btn {
+    top: 270px;
   }
   .small-ad-comp .adv-s {
     width: 345px;

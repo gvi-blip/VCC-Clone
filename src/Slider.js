@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import Card from "./Card";
 import Right from "./images/Right-arrow.svg";
 
 function Slider(props) {
-  const handleResize = () => {
+  const handleResize = useCallback(() => {
     if (props.titleAbbreviation) {
       if (window.innerWidth < 576) {
         // titleRef.current.classList.add("d-none");
@@ -13,7 +13,7 @@ function Slider(props) {
         titleRef.current.style.display = "block";
       }
     }
-  };
+  }, [props.titleAbbreviation]);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     if (props.titleAbbreviation && window.innerWidth < 576) {
@@ -23,7 +23,7 @@ function Slider(props) {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize, props.titleAbbreviation]);
 
   const titleRef = useRef();
   const rightBtn = useRef();

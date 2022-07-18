@@ -58,6 +58,77 @@ button:hover {
   display: none;
 }
 
+.i-ham:hover {
+  cursor: pointer;
+}
+
+.menu-wrapper {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0vw;
+  height: 100vh;
+  z-index: 6;
+  transform: translateX(-100vw);
+  transition: transform 0.5s ease;
+  display: none;
+  background: white;
+}
+.show {
+  transform: translateX(0vw);
+}
+.menu > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 4px #0000001a;
+
+  position: relative;
+}
+
+.bx-sd {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.menu-logo {
+  margin-left: 60px;
+}
+.menu-logo img {
+  width: 120px;
+  object-fit: contain;
+}
+.close {
+  margin-right: 15px;
+}
+.close i {
+  font-size: 36px;
+}
+
+.menu-option {
+  font-size: 16px;
+  font-weight: 500;
+  /* border: 1px solid black; */
+  padding: 12px 20px;
+  border-bottom: 2px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-option:hover {
+  cursor: pointer;
+
+  background: #096ffa;
+  border: none;
+}
+
+.menu-option:nth-of-type(4):hover {
+  background: rgb(248, 57, 0, 0.1);
+  border: none;
+}
 header .container {
   display: flex;
   justify-content: space-between;
@@ -70,7 +141,7 @@ header .links a {
   text-decoration: none;
   font-weight: 600;
   color: #222222;
-  margin-left: 35px;
+  margin-left: 40px;
 }
 
 header .links img {
@@ -662,7 +733,7 @@ footer p {
 .slider-comp .right-btn {
   position: absolute;
   right: 0px;
-  top: 58%;
+  /* top: 58%; */
   background: #316df1;
   border: 2px solid #ffffff;
   height: 40px;
@@ -675,8 +746,8 @@ footer p {
 
 .slider-comp .left-btn {
   position: absolute;
-  left: 0;
-  top: 58%;
+  left: -2px;
+  /* top: 58%; */
   background: #316df1;
   border: 2px solid #ffffff;
   height: 40px;
@@ -740,11 +811,6 @@ footer p {
 
 .vc-premium .container {
   padding: 1px 0 25px 0;
-}
-
-.vc-premium .container .right-btn,
-.vc-premium .container .left-btn {
-  top: 53%;
 }
 
 .vc-premium .title {
