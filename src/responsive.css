@@ -729,6 +729,7 @@
 
   .up-ev-cards .card-address {
     font-size: 10px;
+    width: 100%;
   }
   .up-ev-cards .card-image-cont {
     width: 120px;
