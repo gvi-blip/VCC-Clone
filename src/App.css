@@ -47,6 +47,14 @@ button:hover {
   background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
 }
 
+.card-content {
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+}
 .card-image-cont {
   position: relative;
 }
@@ -319,6 +327,11 @@ nav button:hover {
   font-size: 16px;
   line-height: 27px;
   color: #222222;
+  /* text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important; */
 }
 
 .top-news .text-content p:nth-of-type(3) {
@@ -394,6 +407,11 @@ nav button:hover {
   font-weight: 500;
   letter-spacing: 0.16px;
   line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
 }
 
 /* Card Common properties */
@@ -472,7 +490,6 @@ nav button:hover {
   font-weight: 500;
   letter-spacing: -0.36px;
   line-height: 26px;
-  text-align: left;
 }
 
 .rcwsa-cards-s .card-image-cont {
@@ -643,8 +660,12 @@ nav button:hover {
   width: 20px;
 }
 .slider-comp .shadow {
-  background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
-
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid black;
   position: absolute;
   z-index: 1;
   height: 250px;
@@ -662,9 +683,11 @@ nav button:hover {
   margin-bottom: 50px;
 }
 
-.limited-partner .container .shadow,
+.limited-partner .container .shadow {
+  height: 295px;
+}
 .fn .container .shadow {
-  height: 280px;
+  height: 250px;
 }
 
 .lp-cards {
@@ -714,8 +737,7 @@ nav button:hover {
 }
 
 .vc-premium .shadow {
-  background: transparent linear-gradient(90deg, #00000041 0%, #000000 100%) 0%
-    0% no-repeat padding-box;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   position: absolute;
   z-index: 1;
   height: 360px;
@@ -733,9 +755,13 @@ nav button:hover {
   background: white;
   position: relative;
   bottom: 5px;
-  height: 150px;
+  height: 160px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+
+.vcp-cards > div:nth-of-type(2) p:nth-of-type(3) {
+  margin-top: 5px;
 }
 .vcp-cards .card-title {
   color: #096ffa;
@@ -752,10 +778,13 @@ nav button:hover {
   margin: 10px 0;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  -webkit-line-clamp: 3;
 }
 .vcp-cards .card-content {
   height: 80px !important;
   font-weight: 500;
+  font-size: 16px;
+  -webkit-line-clamp: 4;
 }
 
 /* Upcoming Events */
@@ -793,12 +822,27 @@ nav button:hover {
   width: 250px;
   font-weight: 700;
   font-size: 18px;
-  margin: 5px 0 !important;
-  height: 55px;
+  margin: 5px 0 30px 0 !important;
+  height: 45px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
 }
 .up-ev-cards .card-address {
+  width: 250px;
+  height: max-content;
+
   font-size: 12px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2;
 }
 
 .up-ev .shadow {
@@ -946,6 +990,7 @@ nav button:hover {
   font-weight: 500;
   text-align: left;
   margin-bottom: 5px;
+  -webkit-line-clamp: 3;
 }
 .more-stories-cards .middot {
   margin: 0 5px;
