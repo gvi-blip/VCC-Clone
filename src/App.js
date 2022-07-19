@@ -28,7 +28,15 @@ function App() {
   let [data, setData] = useState("");
   function onSubmitHandler(e) {
     e.preventDefault();
-    console.log(data);
+    // let emailRegex = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+    let emailRegex =
+      /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:|\\)*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:|\\)+)\])/;
+
+    if (emailRegex.test(data)) {
+      console.log(data);
+    } else {
+      alert("Invalid email");
+    }
     setData("");
   }
   return (
