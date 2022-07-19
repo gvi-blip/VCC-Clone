@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  overflow: auto;
+}
 .container {
   width: 1140px;
   margin: 0 auto;
@@ -28,6 +32,19 @@
 
 button:hover {
   cursor: pointer;
+}
+
+.card {
+  position: relative;
+}
+.card-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
 }
 
 .card-image-cont {
@@ -73,12 +90,13 @@ button:hover {
   transition: transform 0.5s ease-out;
   display: none;
   background: white;
-  z-index: 7;
+  z-index: 8;
   overflow: auto !important;
 }
 .show {
   transform: translateX(0vw);
 }
+
 .close:hover {
   cursor: pointer;
 }
@@ -100,7 +118,7 @@ button:hover {
   margin-right: 15px;
 }
 .close i {
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .menu-option {
@@ -111,25 +129,59 @@ button:hover {
   border-bottom: 2px solid #eeeeee;
   display: flex;
   justify-content: space-between;
+
+  color: #222222;
 }
 
 .menu-option:active {
   cursor: pointer;
 
   background: #096ffa;
-  border: none;
+  border-bottom: 1px solid black;
 }
 
+.menu-option:active .menu-option i {
+  color: white;
+}
 .menu-option:nth-of-type(4):active {
   background: rgb(248, 57, 0, 0.1);
   border: none;
 }
 
+.menu-option i {
+  transition: transform 0.5s ease-out;
+}
+.rotate {
+  transform: rotate(180deg);
+  position: relative;
+  top: 2px;
+}
+
+.dropdown-menu {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+.drop {
+  height: 187px;
+}
+
+.dropdown-option {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 40px;
+  border-bottom: 2px solid #eeeeee;
+  color: #222222;
+}
+
+.dropdown-option:active {
+  background: rgb(9, 111, 250, 0.09);
+}
 header {
   position: sticky;
   top: 0;
   background: white;
-  z-index: 8;
+  z-index: 7;
 }
 header .container {
   display: flex;
@@ -156,13 +208,17 @@ header .links img {
 
 nav {
   box-shadow: 0px 2px 4px #0000001a;
+  position: sticky;
+  top: 69px;
+  background: white;
+  z-index: 7;
 }
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   line-height: 18px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding-bottom: 15px;
 }
 

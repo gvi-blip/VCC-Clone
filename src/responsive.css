@@ -178,7 +178,12 @@
   .container {
     width: 540px;
   }
-
+  .menu-option {
+    justify-content: center;
+  }
+  .dropdown-option {
+    text-align: center;
+  }
   .adv p {
     margin-top: 2px;
   }
@@ -663,10 +668,14 @@
   .top-news .text-content h1 {
     font-size: 20px;
   }
-  .top-news .text-content p:nth-of-type(2) {
-    height: 80px;
+  /* .top-news .text-content p:nth-of-type(2) {
+    text-overflow: ellipsis;
+    white-space: normal;
     overflow: hidden;
-  }
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  } */
 
   .top-news-cards .card-image-cont img {
     width: 120px;

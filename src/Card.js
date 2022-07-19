@@ -16,6 +16,7 @@ function Card(props) {
     address,
     author,
   } = props;
+
   return (
     <div className={"card " + cardClass}>
       <div className="card-image-cont">
@@ -42,7 +43,8 @@ function Card(props) {
           {address ? <p className="card-address">{address}</p> : null}
         </p>
       </div>
-      <div className="card-shadow"></div>
+
+      {/* <div className="card-shadow"></div> */}
     </div>
   );
 }

@@ -3,11 +3,14 @@ import Logo from "../images/Header/Logo.png";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const [industryDropdown, setIndustryDropdown] = useState(false);
   const menuRef = useRef();
+  const idmenu = useRef();
   const [bodyOverflow, setBodyOverflow] = useState(false);
   useEffect(() => {
-    document.body.style.overflow = bodyOverflow ? "hidden" : "auto";
+    document.body.style.overflow = bodyOverflow ? "hidden !important" : "auto";
   }, [bodyOverflow]);
+
   return (
     <>
       <div className={"menu-wrapper" + (showMenu ? " show" : "")} ref={menuRef}>
@@ -42,12 +45,29 @@ function Header() {
           <div className="menu-option mts">Private Equity</div>
           <div className="menu-option mts">Venture Capital</div>
           <div className="menu-option mts">M&#38;A</div>
-          <div className="menu-option mts">
+          <div
+            className="menu-option mts"
+            onClick={() => {
+              setIndustryDropdown(!industryDropdown);
+            }}
+          >
             Industry{" "}
             <i
-              className="fa-solid fa-sort-down"
-              style={{ marginRight: "5px" }}
+              className={
+                "fa-solid fa-sort-down" + (industryDropdown ? " rotate" : "")
+              }
+              style={{ marginRight: "5px", marginLeft: "10px" }}
             ></i>
+          </div>
+          <div
+            className={"dropdown-menu" + (industryDropdown ? " drop" : "")}
+            ref={idmenu}
+          >
+            <div className="dropdown-option mts">Finance</div>
+            <div className="dropdown-option mts">Consumer</div>
+            <div className="dropdown-option mts">Infrastructure</div>
+            <div className="dropdown-option mts">TMT</div>
+            <div className="dropdown-option mts">Healthcare</div>
           </div>
           <div className="menu-option mts">Stressed Assets</div>
           <div className="menu-option mts">Limited Partner</div>
@@ -59,7 +79,7 @@ function Header() {
           <div className="menu-option mts">VCC Mobile App</div>
         </div>
       </div>
-      <header className={"header" + (showMenu ? " hp-static" : "")}>
+      <header className="header">
         <div className="container">
           <div className="logo-cont">
             <i
