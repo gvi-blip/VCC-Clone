@@ -1019,7 +1019,12 @@
   .container {
     width: 960px;
   }
-
+  .menu-wrapper {
+    display: none;
+  }
+  body {
+    overflow: auto !important;
+  }
   .advl1 img {
     width: 830px;
   }
@@ -1285,6 +1290,7 @@
   .image {
     width: 100%;
     order: 1;
+    margin-left: 0px;
   }
   .top-news .text-content {
     width: 100%;

@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   overflow: auto;
-}
+} */
 .container {
   width: 1140px;
   margin: 0 auto;
@@ -107,8 +107,10 @@ button:hover {
   background: white;
   z-index: 8;
   overflow: auto !important;
+  display: none;
 }
 .show {
+  display: block;
   transform: translateX(0vw);
 }
 

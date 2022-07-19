@@ -1,16 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Logo from "../images/Header/Logo.png";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [industryDropdown, setIndustryDropdown] = useState(false);
+  const [bodyOverflow, setBodyOverflow] = useState(false);
   const menuRef = useRef();
   const idmenu = useRef();
-  const [bodyOverflow, setBodyOverflow] = useState(false);
+  const handleResize = useCallback(() => {
+    if (window.innerWidth > 992) setShowMenu(false);
+  }, []);
   useEffect(() => {
-    document.body.style.overflow = bodyOverflow ? "hidden !important" : "auto";
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+  useEffect(() => {
+    document.body.style.overflow = bodyOverflow ? "hidden" : "auto";
   }, [bodyOverflow]);
-
   return (
     <>
       <div className={"menu-wrapper" + (showMenu ? " show" : "")} ref={menuRef}>
