@@ -337,7 +337,9 @@
   .container {
     width: 95%;
   }
-
+  .menu-option {
+    padding: 8px 20px;
+  }
   header .links a:nth-of-type(1) {
     display: none;
   }

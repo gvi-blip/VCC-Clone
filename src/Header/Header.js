@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../images/Header/Logo.png";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef();
   const [bodyOverflow, setBodyOverflow] = useState(false);
   useEffect(() => {
     document.body.style.overflow = bodyOverflow ? "hidden" : "auto";
   }, [bodyOverflow]);
-  console.log(showMenu);
   return (
     <>
-      <div className={"menu-wrapper" + (showMenu ? " show" : "")}>
+      <div className={"menu-wrapper" + (showMenu ? " show" : "")} ref={menuRef}>
         <div className="menu">
           <div style={{ display: "flex" }}>
             <div></div>
