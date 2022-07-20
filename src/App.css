@@ -332,11 +332,11 @@ nav button:hover {
   font-size: 16px;
   line-height: 27px;
   color: #222222;
-  /* text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: normal;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  display: -webkit-box !important; */
+  display: -webkit-box !important;
 }
 
 .top-news .text-content p:nth-of-type(3) {

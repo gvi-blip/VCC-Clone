@@ -8,7 +8,10 @@ function Header() {
   const menuRef = useRef();
   const idmenu = useRef();
   const handleResize = useCallback(() => {
-    if (window.innerWidth > 992) setShowMenu(false);
+    if (window.innerWidth > 992) {
+      setShowMenu(false);
+      setBodyOverflow(false);
+    }
   }, []);
   useEffect(() => {
     window.addEventListener("resize", handleResize);

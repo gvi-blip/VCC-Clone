@@ -146,9 +146,7 @@
     letter-spacing: 1px !important;
     margin-bottom: 0px !important;
   }
-  .more-stories-cards .card-image-cont {
-    margin-right: 5px;
-  }
+
   .more-stories-cards .card-image-cont img {
     width: 130px !important;
   }
@@ -744,7 +742,7 @@
     margin-bottom: 0px !important;
   }
   .more-stories-cards .card-image-cont {
-    margin-right: 5px;
+    margin-right: 10px;
   }
   .more-stories-cards .card-image-cont img {
     width: 120px !important;
@@ -756,7 +754,7 @@
     overflow: hidden;
     font-size: 14px !important;
     margin: 3px 0px !important;
-    width: 100% !important;
+    width: 90% !important;
     /* border: 1px solid black; */
   }
   .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) span {
