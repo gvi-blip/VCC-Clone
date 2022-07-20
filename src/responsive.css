@@ -1913,6 +1913,9 @@
     width: 90%;
     margin: 3px 0;
   }
+  .rcwsa-cards-s .card-image-cont {
+    margin-right: 10px;
+  }
 
   .rcwsa-cards-s .card-image-cont img {
     width: 120px;
@@ -1939,10 +1942,6 @@
 @media (max-width: 360px) {
   .rcwsa-cards-s .card-content {
     width: 90%;
-  }
-
-  .rcwsa-cards-s .card-image-cont {
-    margin-right: 5px;
   }
 
   .socials .img-cont img,
