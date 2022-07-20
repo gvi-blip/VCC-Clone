@@ -779,6 +779,11 @@
   .vcp-cards .card-title {
     font-size: 12px !important;
   }
+
+  .card:not(.slider-comp .card) .premium-tag {
+    bottom: 10px;
+    right: 6px;
+  }
 }
 
 @media (min-width: 768px) {
