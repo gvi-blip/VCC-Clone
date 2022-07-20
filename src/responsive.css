@@ -683,17 +683,18 @@
 
   .top-news-cards .card-image-cont img {
     width: 120px;
+    height: 90px;
   }
   .top-news-cards .card-title {
     font-size: 10px;
   }
   .top-news-cards .card-content {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.28px;
-    height: 36px;
-    margin-top: 0;
-    -webkit-line-clamp: 2 !important;
+    height: 55px;
+    margin-top: 5px;
+    -webkit-line-clamp: 3 !important;
   }
 
   .top-news-cards .card-date {
@@ -716,7 +717,7 @@
   }
 
   .up-ev-cards .card-title {
-    font-size: 14px;
+    font-size: 14px !important;
     width: 90%;
     margin: 0px !important;
     height: 45px;
@@ -740,27 +741,43 @@
   .more-stories-cards .card-title {
     font-size: 10px !important;
     letter-spacing: 1px !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 0px !important;
   }
   .more-stories-cards .card-image-cont {
     margin-right: 5px;
   }
   .more-stories-cards .card-image-cont img {
-    width: 130px !important;
+    width: 120px !important;
+    height: 80px;
   }
   .more-stories-cards .card-content {
-    height: 44px !important;
-    line-height: 14px;
+    height: 48px !important;
+    line-height: 16px;
     overflow: hidden;
     font-size: 14px !important;
-    margin-bottom: 0px !important;
+    margin: 3px 0px !important;
     width: 100% !important;
     /* border: 1px solid black; */
   }
-  .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
-    font-size: 8px !important;
+  .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) span {
+    font-size: 10px !important;
     height: 20px;
     overflow: hidden;
+  }
+
+  .card > div:nth-of-type(2) p:nth-of-type(3) span:nth-of-type(2) {
+    font-size: 14px !important;
+  }
+  .top-news .text-content p:first-of-type {
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-size: 10px !important;
+  }
+
+  .vcp-cards .card-title {
+    font-size: 12px !important;
   }
 }
 
