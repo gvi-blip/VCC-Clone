@@ -1131,7 +1131,7 @@
   }
 
   .more-stories-cards .container > div {
-    justify-content: center;
+    justify-content: space-between !important;
   }
   .more-stories-cards {
     width: 49%;
@@ -1254,9 +1254,6 @@
   }
 }
 @media (max-width: 992px) {
-  .more-stories .container > div {
-    justify-content: flex-start !important;
-  }
   .more-stories h3 {
     margin: 0;
   }
@@ -1457,9 +1454,9 @@
   .rcwsa-cards-s .card-title {
     margin-bottom: 0;
   }
-  .more-stories .container > div {
-    justify-content: center;
-  }
+  /* .more-stories .container > div {
+    justify-content: space-between;
+  } */
   /* .more-stories h3 {
     text-align: center;
   } */
