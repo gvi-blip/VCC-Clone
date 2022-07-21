@@ -1018,6 +1018,10 @@ footer > div {
 .social-media-links {
   margin-top: 10px;
 }
+
+.social-media-links a {
+  text-decoration: none;
+}
 .social-media-links a + a {
   margin-left: 15px;
 }
