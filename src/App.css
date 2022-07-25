@@ -109,6 +109,7 @@ button:hover {
   overflow: auto !important;
   display: none;
 }
+
 .show {
   display: block;
   transform: translateX(0vw);
@@ -117,7 +118,7 @@ button:hover {
 .close:hover {
   cursor: pointer;
 }
-.menu > div:first-of-type {
+.menu > li:first-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,6 +149,10 @@ button:hover {
   justify-content: space-between;
 
   color: #222222;
+}
+
+.menu {
+  list-style-type: none;
 }
 
 .menu-option:active {
@@ -205,6 +210,10 @@ header .container {
   padding: 10px 0;
 }
 
+header .links {
+  list-style: none;
+  display: flex;
+}
 header .links a {
   font-size: 14px;
   text-decoration: none;
@@ -243,6 +252,7 @@ nav .links {
   width: 65%;
   display: flex;
   justify-content: space-between;
+  list-style: none;
 }
 nav a {
   text-decoration: none;

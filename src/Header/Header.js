@@ -25,8 +25,8 @@ function Header() {
   return (
     <>
       <div className={"menu-wrapper" + (showMenu ? " show" : "")} ref={menuRef}>
-        <div className="menu">
-          <div style={{ display: "flex" }}>
+        <ul className="menu">
+          <li style={{ display: "flex" }}>
             <div></div>
             <div className="menu-logo">
               <img src={Logo} alt="VCCircle Logo" height="45" width="140" />
@@ -40,10 +40,10 @@ function Header() {
             >
               <i className="fa-solid fa-xmark"></i>
             </div>
-          </div>
-          <div className="menu-option mts">Home</div>
-          <div className="menu-option mts">Sign In</div>
-          <div className="menu-option mts">
+          </li>
+          <li className="menu-option mts">Home</li>
+          <li className="menu-option mts">Sign In</li>
+          <li className="menu-option mts">
             {" "}
             <p>
               <img
@@ -52,11 +52,11 @@ function Header() {
               ></img>{" "}
               Subscribe
             </p>
-          </div>
-          <div className="menu-option mts">Private Equity</div>
-          <div className="menu-option mts">Venture Capital</div>
-          <div className="menu-option mts">M&#38;A</div>
-          <div
+          </li>
+          <li className="menu-option mts">Private Equity</li>
+          <li className="menu-option mts">Venture Capital</li>
+          <li className="menu-option mts">M&#38;A</li>
+          <li
             className="menu-option mts"
             onClick={() => {
               setIndustryDropdown(!industryDropdown);
@@ -69,26 +69,26 @@ function Header() {
               }
               style={{ marginRight: "5px", marginLeft: "10px" }}
             ></i>
-          </div>
-          <div
+          </li>
+          <ul
             className={"dropdown-menu" + (industryDropdown ? " drop" : "")}
             ref={idmenu}
           >
-            <div className="dropdown-option mts">Finance</div>
-            <div className="dropdown-option mts">Consumer</div>
-            <div className="dropdown-option mts">Infrastructure</div>
-            <div className="dropdown-option mts">TMT</div>
-            <div className="dropdown-option mts">Healthcare</div>
-          </div>
-          <div className="menu-option mts">Stressed Assets</div>
-          <div className="menu-option mts">Limited Partner</div>
-          <div className="menu-option mts">Founder</div>
-          <div className="menu-option mts">About Us</div>
-          <div className="menu-option mts">Tag Listing</div>
-          <div className="menu-option mts">Advertise With Us</div>
-          <div className="menu-option mts">Contact Us</div>
-          <div className="menu-option mts">VCC Mobile App</div>
-        </div>
+            <li className="dropdown-option mts">Finance</li>
+            <li className="dropdown-option mts">Consumer</li>
+            <li className="dropdown-option mts">Infrastructure</li>
+            <li className="dropdown-option mts">TMT</li>
+            <li className="dropdown-option mts">Healthcare</li>
+          </ul>
+          <li className="menu-option mts">Stressed Assets</li>
+          <li className="menu-option mts">Limited Partner</li>
+          <li className="menu-option mts">Founder</li>
+          <li className="menu-option mts">About Us</li>
+          <li className="menu-option mts">Tag Listing</li>
+          <li className="menu-option mts">Advertise With Us</li>
+          <li className="menu-option mts">Contact Us</li>
+          <li className="menu-option mts">VCC Mobile App</li>
+        </ul>
       </div>
       <div className="wrapper">
         <header className="header">
@@ -103,56 +103,76 @@ function Header() {
               ></i>
               <img src={Logo} alt="VCCircle Logo" height="45" width="140" />
             </div>
-            <div className="links">
-              <a href="/" className="mts">
-                <img
-                  src={require("../images/Header/magnifying-glass.png")}
-                  alt="Search icon"
-                ></img>
-                Search
-              </a>
-              <a href="/" className="mts">
-                <img
-                  src={require("../images/Header/crown.png")}
-                  alt="Crown icon"
-                ></img>
-                Subscribe
-              </a>
-              <a href="/" className="mts">
-                <img
-                  src={require("../images/Header/User.png")}
-                  alt="User icon"
-                ></img>
-                Sign In
-              </a>
-            </div>
+            <ul className="links">
+              <li>
+                <a href="/#" className="mts">
+                  <img
+                    src={require("../images/Header/magnifying-glass.png")}
+                    alt="Search icon"
+                  ></img>
+                  Search
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  <img
+                    src={require("../images/Header/crown.png")}
+                    alt="Crown icon"
+                  ></img>
+                  Subscribe
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  <img
+                    src={require("../images/Header/User.png")}
+                    alt="User icon"
+                  ></img>
+                  Sign In
+                </a>
+              </li>
+            </ul>
           </div>
         </header>
         <nav>
           <div className="container">
-            <div className="links">
-              <a href="/" className="mts">
-                Private Equity
-              </a>
-              <a href="/" className="mts">
-                Venture Capital
-              </a>
-              <a href="/" className="mts">
-                M&A
-              </a>
-              <a href="/" className="mts">
-                Industry <i className="fa-solid fa-sort-down"></i>
-              </a>
-              <a href="/" className="mts">
-                Stressed Assets
-              </a>
-              <a href="/" className="mts">
-                Limited Partner
-              </a>
-              <a href="/" className="mts">
-                Founder
-              </a>
-            </div>
+            <ul className="links">
+              <li>
+                <a href="/#" className="mts">
+                  Private Equity
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  Venture Capital
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  M&A
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  Industry <i className="fa-solid fa-sort-down"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  Stressed Assets
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  Limited Partner
+                </a>
+              </li>
+              <li>
+                <a href="/#" className="mts">
+                  Founder
+                </a>
+              </li>
+            </ul>
             <button className="mts">
               Customize <i className="fa-solid fa-sort-down"></i>
             </button>
