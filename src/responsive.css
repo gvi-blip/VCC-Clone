@@ -863,7 +863,7 @@
   }
 
   .slider-comp .lp-cards {
-    min-width: 290px;
+    min-width: 230px;
   }
   .slider-comp .lp-cards .card-image-cont img {
     width: 100%;
@@ -902,7 +902,7 @@
 
   .limited-partner .right-btn,
   .limited-partner .left-btn {
-    top: 245px;
+    top: 215px;
   }
 
   .vc-premium .right-btn,
@@ -1195,7 +1195,7 @@
   }
 
   .slider-comp .lp-cards {
-    min-width: 280px;
+    min-width: 230px;
   }
   .slider-comp .lp-cards .card-image-cont img {
     width: 100%;

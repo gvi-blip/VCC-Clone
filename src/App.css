@@ -627,6 +627,7 @@ nav button:hover {
   display: flex;
   width: 100%;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
 
@@ -636,6 +637,10 @@ nav button:hover {
 }
 .slider-comp .cards::-webkit-scrollbar {
   display: none;
+}
+
+.slider-comp .card {
+  scroll-snap-align: start;
 }
 
 .slider-comp .card + .card {

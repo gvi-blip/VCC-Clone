@@ -136,7 +136,7 @@ function Slider(props) {
           })}
         </div>
 
-        <button className="left-btn" onClick={() => scroll(-350)} ref={leftBtn}>
+        <button className="left-btn" onClick={() => scroll(-250)} ref={leftBtn}>
           <img
             src={require("./images/chevron-left.png")}
             alt="Left arrow"
@@ -144,7 +144,7 @@ function Slider(props) {
         </button>
         <button
           className="right-btn"
-          onClick={() => scroll(350)}
+          onClick={() => scroll(250)}
           ref={rightBtn}
         >
           <img src={Right} alt="Right arrow"></img>
