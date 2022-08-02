@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header/Header";
 import Card from "./Card";
 import RCwsa from "./RCwsa";
@@ -25,8 +25,18 @@ import {
 } from "./data";
 
 function App() {
-  let [data, setData] = useState("");
+  const [data, setData] = useState("");
+  const [apiData, setApiData] = useState();
+  useEffect(() => {
+    fetch("https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setApiData(data);
+      });
+  }, []);
   function onSubmitHandler(e) {
+    console.log(apiData);
     e.preventDefault();
     // let emailRegex = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
     let emailRegex =
