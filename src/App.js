@@ -14,7 +14,7 @@ import {
   LPcardscontent,
   mostPopularCards,
   editorsPickCards,
-  topNewsCards,
+  // topNewsCards,
   vcPremiumCards,
   tmtCards,
   tcCards,
@@ -23,20 +23,69 @@ import {
   founderCards,
   upEvCards,
 } from "./data";
-
+import TopStories from "./TopStories";
+const sliderCompClasses = {
+  "limited-partner": {
+    sliderClass: "limited-partner",
+    cardClass: "lp-cards",
+    cardContClass: "check",
+  },
+  "vccircle-premium": {
+    sliderClass: "vc-premium",
+    cardClass: "vcp-cards",
+    crown: true,
+    subscribeButton: true,
+  },
+  // "upcoming-events": {
+  //   sliderClass: "up-ev",
+  //   cardClass: "up-ev-cards",
+  // },
+  founders: {
+    sliderClass: "fn",
+    cardClass: "fn-cards",
+    cardContClass: "check",
+  },
+  tmt: {
+    sliderClass: "tmt",
+    cardClass: "tmt-cards",
+    cardContClass: "check",
+  },
+  financials: {
+    sliderClass: "fin",
+    cardClass: "fin-cards",
+    cardContClass: "check",
+  },
+  "mergers-acquisitions": {
+    titleAbbreviation: "M &#38; A",
+    sliderClass: "mac",
+    cardClass: "mac-cards",
+    cardContClass: "check",
+  },
+};
+console.log(sliderCompClasses["limited-partner"]);
 function App() {
   const [data, setData] = useState("");
-  const [apiData, setApiData] = useState();
+  const [apiData, setApiData] = useState([]);
   useEffect(() => {
     fetch("https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setApiData(data);
+        setApiData(data.section_list);
       });
+    // async function getData() {
+    //   const res = await fetch(
+    //     "https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185"
+    //   );
+    //   const data = await res.json();
+    //   console.log(data);
+    //   setApiData(data.section_list);
+    // }
+    // getData();
   }, []);
+  // useEffect(() => {
+  //   console.log(apiData.length);
+  // }, [apiData]);
   function onSubmitHandler(e) {
-    console.log(apiData);
     e.preventDefault();
     // let emailRegex = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
     let emailRegex =
@@ -49,13 +98,18 @@ function App() {
     }
     setData("");
   }
+
   return (
     <>
       <Header />
-      <div className="container">
-        <Advertisment image={"./Adv1s.png"} adclass="adv-l advl1" />
-      </div>
-      <section className="top-news">
+      {apiData.map((item) => {
+        if (item.section_slug === "top-stories") {
+          return <TopStories data={item}></TopStories>;
+        }
+        return null;
+      })}
+
+      {/* <section className="top-news">
         <div className="container">
           <div className="text-content">
             <p className="mts">MANUFACUTRING</p>
@@ -102,15 +156,13 @@ function App() {
             );
           })}
         </div>
-      </section>
-      <div className="container">
-        <Advertisment image={"./Adv2.png"} width={720} adclass="adv-l advl2" />
-      </div>
-      <RCwsa
+      </section> */}
+
+      {/* <RCwsa
         sectionTitle="Editor's Pick"
         cards={editorsPickCards}
         ad={"./Adv3.png"}
-      />
+      /> */}
       <section className="socials">
         <div className="container">
           <div>
@@ -156,7 +208,7 @@ function App() {
           </div>
         </div>
       </section>
-      <Slider
+      {/* <Slider
         sectionTitle="Limited Partner"
         cards={LPcardscontent}
         sliderClass="limited-partner"
@@ -311,7 +363,7 @@ function App() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer></Footer>
     </>
   );

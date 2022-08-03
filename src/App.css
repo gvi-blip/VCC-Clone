@@ -370,6 +370,17 @@ nav button:hover {
   color: #b5b5b5;
   margin: 0 10px;
 }
+.top-news .text-content a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.top-news .author-name:hover {
+  cursor: pointer;
+  color: #096ffa;
+}
 
 .top-news .text-content button {
   background: #096ffa;
@@ -389,6 +400,7 @@ nav button:hover {
 
 .image img {
   width: 100%;
+  border-radius: 15px;
 }
 
 /* Top News Cards */
@@ -435,13 +447,54 @@ nav button:hover {
   font-size: 12px;
   color: #798692;
 }
+.card a {
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
 
 .card-author {
   font-family: "Montserrat";
   font-size: 12px;
   color: #798692;
+  text-decoration: none;
 }
 
+.card-author :hover {
+  color: #096ffa;
+}
+
+.card img {
+  border-radius: 10px !important;
+}
+
+.card .a-author {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #798692;
+  position: relative;
+  margin-left: auto;
+  width: 20px;
+}
+
+.card .a-author-tooltip {
+  display: none;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  top: -20px;
+}
+.card .a-author:hover {
+  cursor: pointer;
+  color: #096ffa;
+}
+
+/* .card .a-author:hover .a-author-tooltip {
+  display: block;
+} */
 /* Small ad section */
 .small-ad-comp {
   display: flex;
