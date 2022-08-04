@@ -8,7 +8,7 @@ function Slider(props) {
     sliderClass,
     subscribeButton,
     crown,
-    cards,
+    data,
     cardClass,
     cardContClass,
   } = props;
@@ -37,17 +37,6 @@ function Slider(props) {
   const leftBtn = useRef();
   const shadowRef = useRef();
   const rowRef = useRef();
-  // const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
-  // console.log("m:" + m);
-  // const handleClick = (direction: any) => {
-  //   if (rowRef.current) {
-  //     const { scrollLeft, clientWidth } = rowRef.current;
-
-  //     const scrollTo =
-  //       direction === 1 ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-  //     rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
-  //   }
-  // };
 
   function btnsDisplay() {
     const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
@@ -75,7 +64,11 @@ function Slider(props) {
 
   return (
     <div className={"slider-comp " + sliderClass}>
-      <div className="container">
+      <div
+        className={`container ${
+          data.section_border && data.section_border === "1" ? "b-bottom" : ""
+        }`}
+      >
         <div className="title">
           <div style={{ display: "flex", alignItems: "center" }}>
             {titleAbbreviation ? (
@@ -86,7 +79,7 @@ function Slider(props) {
               ref={titleRef}
               className="sect-title"
             >
-              {props.sectionTitle}
+              {data.section_name || ""}
             </h2>
             {crown ? (
               <img
@@ -118,19 +111,13 @@ function Slider(props) {
             }
           }}
         >
-          {cards.map((card) => {
+          {data.stories_list.map((card) => {
             return (
               <Card
+                key={card?.feid || ""}
                 cardClass={cardClass}
-                image={card.image}
-                title={card.title}
-                author={card.author}
-                date={card.date}
-                content={card.content}
-                premium={card.premium}
                 cardContClass={cardContClass}
-                address={card.address}
-                eventDate={card.eventDate}
+                cardData={card}
               />
             );
           })}

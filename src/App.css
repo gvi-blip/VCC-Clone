@@ -14,6 +14,9 @@
   margin: 0 auto;
 }
 
+.b-bottom {
+  border-bottom: 1px solid #e3e3e3;
+}
 .d-none {
   display: none;
 }
@@ -396,6 +399,7 @@ nav button:hover {
 
 .image {
   width: 560px;
+  position: relative;
 }
 
 .image img {
@@ -407,7 +411,7 @@ nav button:hover {
 .tn-cards-cont .container {
   display: flex;
   justify-content: space-between;
-  margin: 30px auto 50px auto;
+  margin: 5px auto 50px auto;
 }
 
 .top-news-cards {
@@ -470,26 +474,26 @@ nav button:hover {
   border-radius: 10px !important;
 }
 
-.card .a-author {
+.a-author {
   font-family: "Montserrat";
   font-size: 12px;
   color: #798692;
   position: relative;
-  margin-left: auto;
   width: 20px;
 }
 
-.card .a-author-tooltip {
+.a-author-tooltip {
   display: none;
   position: absolute;
-  height: 20px;
-  width: 20px;
+  width: max-content;
   border: 1px solid black;
-  top: -20px;
+  top: -50px;
+  right: 0px;
+  background: white;
 }
-.card .a-author:hover {
+.a-author:not(.a-author-tooltip):hover {
   cursor: pointer;
-  color: #096ffa;
+  color: #096ffa !important;
 }
 
 /* .card .a-author:hover .a-author-tooltip {
@@ -508,7 +512,7 @@ nav button:hover {
   margin-left: 20px;
 }
 .small-ad-comp:first-of-type {
-  border-bottom: 1px solid #e3e3e3;
+  /* border-bottom: 1px solid #e3e3e3; */
 }
 .small-ad-comp .content {
   width: max-content;
@@ -578,6 +582,7 @@ nav button:hover {
 }
 .rcwsa-cards-s:nth-of-type(3) {
   padding-bottom: 0;
+  /* border-bottom: 1px solid #eeeeee; */
 }
 .rcwsa-cards-s .card-title {
   margin: 0 0 8px 0;
@@ -684,9 +689,25 @@ nav button:hover {
   scroll-behavior: smooth;
 }
 
+.slider-comp .cards:not(.vcp-cards) .card-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #316df1;
+}
+
+/* .slider-comp .cards a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+} */
+
 .slider-comp .card-content {
   font-weight: 500;
   color: #222222;
+}
+
+.slider-comp .card .card-author:hover {
+  color: #096ffa;
 }
 .slider-comp .cards::-webkit-scrollbar {
   display: none;
@@ -822,6 +843,11 @@ nav button:hover {
   width: 270px;
 }
 
+.vcp-cards .card-image-cont img {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
 .vcp-cards > div:nth-of-type(2) {
   padding: 15px;
   background: white;
@@ -934,8 +960,8 @@ nav button:hover {
 
 /* TMT SLider */
 .tmt .container {
-  border-top: 1px solid #e2e2e2;
-  border-bottom: 1px solid #e2e2e2;
+  /* border-top: 1px solid #e2e2e2; */
+  /* border-bottom: 1px solid #e2e2e2; */
   padding: 15px 0 40px 0;
 }
 
@@ -949,10 +975,10 @@ nav button:hover {
 }
 
 .fin .container {
-  border-top: 1px solid #e2e2e2;
+  /* border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
-  margin-top: 50px;
-  padding: 20px 0 50px 0;
+  margin-top: 50px; */
+  padding: 10px 0 25px 0;
 }
 
 /* NEWSLETTER */

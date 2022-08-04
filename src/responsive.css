@@ -199,7 +199,7 @@
 
   .tn-cards-cont .container {
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .top-news-cards .card-content {
@@ -1135,7 +1135,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
   }
-  .vcctv iframe {
+  .vcctv img {
     width: 48%;
   }
 
@@ -1581,7 +1581,7 @@
   .top-news-cards {
     width: 270px;
   }
-  .vcctv iframe {
+  .vcctv img {
     width: 530px;
   }
   .more-stories-cards {
@@ -1752,7 +1752,7 @@
     width: 900px;
   }
 
-  .vcctv iframe {
+  .vcctv img {
     width: 650px;
   }
 

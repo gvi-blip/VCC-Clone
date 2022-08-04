@@ -1,5 +1,5 @@
 import Advertisment from "./Advertisment/Advertisment";
-import Card from "./Card";
+import Card, { TopNewsCardL } from "./Card";
 // import { topNewsCards } from "./data";
 function TopStories(props) {
   const { data } = props;
@@ -16,7 +16,7 @@ function TopStories(props) {
     <>
       {stories_list && stories_list.length > 0 ? (
         <>
-          {section_advertisement ? (
+          {/* {section_advertisement ? (
             <div className="container">
               <Advertisment image={"./Adv1s.png"} adclass="adv-l advl1" />
             </div>
@@ -38,7 +38,6 @@ function TopStories(props) {
                       ""}
                   </a>
                 </p>
-                {/* <h1>{(stories_list[0] && stories_list[0].title) || ""}</h1> */}
                 <h1>
                   <a href={stories_list[0]?.slug}>{stories_list[0]?.title}</a>
                 </h1>
@@ -116,17 +115,29 @@ function TopStories(props) {
             <div className="container">
               <Advertisment image={"./Adv3.png"} adclass="adv-s ad-b-tn" />
             </div>
+          ) : null} */}
+          {section_advertisement ? (
+            <div className="container">
+              <Advertisment image={"./Adv1s.png"} adclass="adv-l advl1" />
+            </div>
           ) : null}
 
           <section className="tn-cards-cont">
             <div className="container">
               {stories_list.map((card, index) => {
-                if (index === 0 || card === null || card === undefined)
-                  return null;
-                if (index === 2 && card.author_details.length === 1) {
+                if (card === null || card === undefined) return null;
+                if (index === 4 && card.author_details.length === 1) {
                   card.author_details.push({ name: "GVI" });
                   card.author_details.push({ name: "Papon Dillo" });
                 }
+                if (index === 0)
+                  return (
+                    <TopNewsCardL
+                      cardData={card}
+                      key={card?.feid || ""}
+                      section_advertisement={section_advertisement}
+                    />
+                  );
                 return (
                   <Card
                     key={card?.feid || ""}
@@ -148,6 +159,13 @@ function TopStories(props) {
           ) : null}
         </>
       ) : null}
+      {
+        <div
+          className={`container ${
+            data.section_border && data.section_border === "1" ? "b-bottom" : ""
+          }`}
+        ></div>
+      }
     </>
   );
 }
