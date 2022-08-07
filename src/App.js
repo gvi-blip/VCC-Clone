@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header/Header";
 import Card from "./Card";
 import RCwsa from "./RCwsa";
-import Advertisment from "./Advertisment/Advertisment";
 import VCCTV from "./VCCTV";
 import Footer from "./Footer";
 import Slider from "./Slider";
@@ -12,6 +11,7 @@ import "./responsive.css";
 
 import TopStories from "./TopStories";
 import Infographic from "./Infographic";
+import { BrowserRouter as Router } from "react-router-dom";
 const sliderCompClasses = {
   "limited-partner": {
     sliderClass: "limited-partner",
@@ -63,64 +63,68 @@ function App() {
   return (
     <>
       <Header />
-      {apiData.map((item) => {
-        if (item.section_slug in sliderCompClasses) {
-          return (
-            <Slider
-              sliderClass={sliderCompClasses[item.section_slug].sliderClass}
-              cardClass={sliderCompClasses[item.section_slug].cardClass}
-              cardContClass={sliderCompClasses[item.section_slug].cardContClass}
-              data={item}
-              crown={item.section_slug === "vccircle-premium"}
-            />
-          );
-        }
-        if (item.section_slug === "top-stories") {
-          return <TopStories data={item}></TopStories>;
-        }
-        if (item.section_slug === "infographic") {
-          return <Infographic></Infographic>;
-        }
+      <Router>
+        {apiData.map((item) => {
+          if (item.section_slug in sliderCompClasses) {
+            return (
+              <Slider
+                sliderClass={sliderCompClasses[item.section_slug].sliderClass}
+                cardClass={sliderCompClasses[item.section_slug].cardClass}
+                cardContClass={
+                  sliderCompClasses[item.section_slug].cardContClass
+                }
+                data={item}
+                crown={item.section_slug === "vccircle-premium"}
+              />
+            );
+          }
+          if (item.section_slug === "top-stories") {
+            return <TopStories data={item}></TopStories>;
+          }
+          if (item.section_slug === "infographic") {
+            return <Infographic></Infographic>;
+          }
 
-        if (item.section_slug === "vcc-tv") {
-          return (
-            <VCCTV
-              url="https://www.youtube.com/embed/THL1OPn72vo"
-              data={item}
-            />
-          );
-        }
+          if (item.section_slug === "vcc-tv") {
+            return (
+              <VCCTV
+                url="https://www.youtube.com/embed/THL1OPn72vo"
+                data={item}
+              />
+            );
+          }
 
-        if (
-          item.section_slug === "editors-pick" ||
-          item.section_slug === "most-popular"
-        ) {
-          return <RCwsa ad={"./Adv3.png"} data={item} />;
-        }
-        if (item.section_slug === "more-stories") {
-          return (
-            <section className="more-stories">
-              <div
-                className={`container ${
-                  item.section_border && item.section_border === "1"
-                    ? "b-bottom"
-                    : ""
-                }`}
-              >
-                <h3 className="mts">More Stories</h3>
-                <div>
-                  {item.stories_list.map((card) => {
-                    return (
-                      <Card cardClass="more-stories-cards" cardData={card} />
-                    );
-                  })}
+          if (
+            item.section_slug === "editors-pick" ||
+            item.section_slug === "most-popular"
+          ) {
+            return <RCwsa ad={"./Adv3.png"} data={item} />;
+          }
+          if (item.section_slug === "more-stories") {
+            return (
+              <section className="more-stories">
+                <div
+                  className={`container ${
+                    item.section_border && item.section_border === "1"
+                      ? "b-bottom"
+                      : ""
+                  }`}
+                >
+                  <h3 className="mts">More Stories</h3>
+                  <div>
+                    {item.stories_list.map((card) => {
+                      return (
+                        <Card cardClass="more-stories-cards" cardData={card} />
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </section>
-          );
-        }
-        return null;
-      })}
+              </section>
+            );
+          }
+          return null;
+        })}
+      </Router>
 
       <Footer></Footer>
     </>

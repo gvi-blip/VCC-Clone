@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./VCCTV.css";
 import Advertisment from "./Advertisment/Advertisment";
+// import "./App.css";
 
 function VCCTV(props) {
   const ttRef = useRef();
@@ -51,6 +52,7 @@ function VCCTV(props) {
           </div>
           <div>
             <img src={file_url || ""} alt={file_alt || ""}></img>
+
             <div className="text-content mts">
               <p>
                 <a href={(industry_details && industry_details[0]?.slug) || ""}>

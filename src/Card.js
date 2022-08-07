@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import Advertisment from "./Advertisment/Advertisment";
+import { Link } from "react-router-dom";
 
 function Card(props) {
   const ttRef = useRef("");
@@ -14,8 +15,10 @@ function Card(props) {
     title,
     premium,
     slug,
+    summary,
   } = cardData;
-
+  // author_details = undefined
+  // file_url = "kjnj";
   const date = publish ? new Date(Date.parse(publish)) : "";
   const day = date
     ? date.getDate() < 10
@@ -27,7 +30,7 @@ function Card(props) {
   return (
     <div className={"card " + cardClass}>
       <div className="card-image-cont">
-        <a href={slug || ""}>
+        <Link to={slug || ""}>
           <img
             src={file_url || require("./images/topnews/manufacturing.png")}
             alt={file_alt || ""}
@@ -37,23 +40,27 @@ function Card(props) {
           ) : (
             ""
           )}
-        </a>
+        </Link>
       </div>
       <div>
         {/* {eventDate ? <p className="card-eventdate">{eventDate}</p> : null} */}
         {industry_details && industry_details[0]?.name ? (
           <p className="card-title">
-            <a href={industry_details[0]?.slug}>
+            <Link to={industry_details[0]?.slug}>
               {industry_details[0].name.toUpperCase()}
-            </a>
+            </Link>
           </p>
         ) : null}
         <p
           className={"card-content mts " + (cardContClass ? cardContClass : "")}
         >
-          <a href={slug || " "}>{title || ""}</a>
+          <Link to={slug || " "}>{title || ""}</Link>
         </p>
-        <p style={{ display: "flex", justifyContent: "space-between" }}>
+        {cardClass &&
+        (cardClass === "top-stories-card-l" || cardClass === "vcctv-card") ? (
+          <p>{summary || ""}</p>
+        ) : null}
+        <p>
           <span>
             <span className="card-date">
               {day} {month}
@@ -62,42 +69,43 @@ function Card(props) {
 
             {author_details && author_details[0]?.name ? (
               <span className="card-author">
-                <a href={author_details[0].slug}>{author_details[0].name}</a>
+                <Link to={author_details[0].slug}>
+                  {author_details[0].name}
+                </Link>
               </span>
             ) : null}
             {address ? <p className="card-address">{address}</p> : null}
           </span>
-          <div>
-            {author_details && author_details.length > 1 ? (
-              <span
-                className="a-author"
-                onMouseEnter={() => {
-                  ttRef.current.style.display = "block";
+
+          {author_details && author_details.length > 1 ? (
+            <span
+              className="a-author"
+              onMouseEnter={() => {
+                ttRef.current.style.display = "block";
+              }}
+              style={{ marginLeft: "10px" }}
+            >
+              <span>{`+${author_details.length - 1}`}</span>
+              <div
+                className="a-author-tooltip"
+                ref={ttRef}
+                onMouseLeave={() => {
+                  ttRef.current.style.display = "none";
                 }}
               >
-                {`+${author_details.length - 1}`}
-                <div
-                  className="a-author-tooltip"
-                  ref={ttRef}
-                  onMouseLeave={() => {
-                    ttRef.current.style.display = "none";
-                  }}
-                >
-                  <ul style={{ listStyle: "none" }}>
-                    {author_details.map((author, index) => {
-                      console.log(author);
-                      if (index === 0) return null;
-                      return (
-                        <li>
-                          <a href={author.slug}>{author.name}</a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </span>
-            ) : null}
-          </div>
+                <ul style={{ listStyle: "none", padding: "10px" }}>
+                  {author_details.map((author, index) => {
+                    if (index === 0) return null;
+                    return (
+                      <li>
+                        <Link to={author.slug || ""}>{author.name}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </span>
+          ) : null}
         </p>
       </div>
     </div>
@@ -126,14 +134,14 @@ export function TopNewsCardL(props) {
         <div className="container">
           <div className="text-content">
             <p className="mts">
-              <a href={(industry_details && industry_details[0]?.slug) || ""}>
+              <Link to={(industry_details && industry_details[0]?.slug) || ""}>
                 {(industry_details &&
                   industry_details[0]?.name.toUpperCase()) ||
                   ""}
-              </a>
+              </Link>
             </p>
             <h1>
-              <a href={slug || ""}>{title || ""}</a>
+              <Link to={slug || ""}>{title || ""}</Link>
             </h1>
             <p className="mts">{summary || ""}</p>
             <p className="mts">
@@ -156,7 +164,7 @@ export function TopNewsCardL(props) {
                   console.log(author_details[0].slug);
                 }}
               >
-                <a href={(author_details && author_details[0]?.slug) || ""}>
+                <Link to={(author_details && author_details[0]?.slug) || ""}>
                   {(author_details && author_details[0]?.name) || ""}
                   {/* // ? author_details.length === 1
                     //   ? author_details[0].name
@@ -164,7 +172,7 @@ export function TopNewsCardL(props) {
                     //       author_details.length - 1
                     //     }`
                     // : ""} */}
-                </a>
+                </Link>
               </span>
               <div>
                 {author_details && author_details.length > 1 ? (
@@ -197,7 +205,7 @@ export function TopNewsCardL(props) {
             </button>
           </div>
           <div className="image">
-            <a href={slug || ""}>
+            <Link to={slug || ""}>
               <img
                 src={file_url || require("./images/topnews/manufacturing.png")}
                 alt={file_alt || ""}
@@ -207,7 +215,7 @@ export function TopNewsCardL(props) {
               ) : (
                 ""
               )}
-            </a>
+            </Link>
           </div>
         </div>
       </section>

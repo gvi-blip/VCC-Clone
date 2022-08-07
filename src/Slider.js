@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import Card from "./Card";
 import Right from "./images/Right-arrow.svg";
+import { Link } from "react-router-dom";
+import Advertisment from "./Advertisment/Advertisment";
 
 function Slider(props) {
   const {
@@ -63,82 +65,99 @@ function Slider(props) {
   };
 
   return (
-    <div className={"slider-comp " + sliderClass}>
-      <div
-        className={`container ${
-          data.section_border && data.section_border === "1" ? "b-bottom" : ""
-        }`}
-      >
-        <div className="title">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            {titleAbbreviation ? (
-              <h2 className="title-abv">{titleAbbreviation}</h2>
-            ) : null}
-            <h2
-              style={{ marginRight: "10px" }}
-              ref={titleRef}
-              className="sect-title"
-            >
-              {data.section_name || ""}
-            </h2>
-            {crown ? (
-              <img
-                src={require("./images/Header/crown.png")}
-                alt="Crown"
-                height="24"
-                width="24"
-              />
-            ) : null}
-          </div>
-          {subscribeButton ? (
-            <button>SUBSCRIBE</button>
-          ) : (
-            <p className="mts">
-              View More{" "}
-              <i
-                className="fa-solid fa-chevron-right"
-                style={{ fontSize: "12px" }}
-              ></i>
-            </p>
-          )}
-        </div>
+    <>
+      <div className={"slider-comp " + sliderClass}>
         <div
-          className="cards"
-          ref={rowRef}
-          onScroll={() => {
-            if (window.innerWidth > 576) {
-              btnsDisplay();
-            }
-          }}
+          className={`container ${
+            data.section_border && data.section_border === "1" ? "b-bottom" : ""
+          }`}
         >
-          {data.stories_list.map((card) => {
-            return (
-              <Card
-                key={card?.feid || ""}
-                cardClass={cardClass}
-                cardContClass={cardContClass}
-                cardData={card}
-              />
-            );
-          })}
-        </div>
+          <div className="title">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              {titleAbbreviation ? (
+                <h2 className="title-abv">{titleAbbreviation}</h2>
+              ) : null}
+              <h2
+                style={{ marginRight: "10px" }}
+                ref={titleRef}
+                className="sect-title"
+              >
+                {data.section_name || ""}
+              </h2>
+              {crown ? (
+                <img
+                  src={require("./images/Header/crown.png")}
+                  alt="Crown"
+                  height="24"
+                  width="24"
+                />
+              ) : null}
+            </div>
+            {subscribeButton ? (
+              <button>SUBSCRIBE</button>
+            ) : (
+              // <p className="mts">
+              <Link to="/" className="mts vm">
+                View More{" "}
+                <i
+                  className="fa-solid fa-chevron-right"
+                  style={{ fontSize: "12px" }}
+                ></i>
+              </Link>
+              // </p>
+            )}
+          </div>
+          <div
+            className="cards"
+            ref={rowRef}
+            onScroll={() => {
+              if (window.innerWidth > 576) {
+                btnsDisplay();
+              }
+            }}
+          >
+            {data.stories_list.map((card) => {
+              return (
+                <Card
+                  key={card?.feid || ""}
+                  cardClass={cardClass}
+                  cardContClass={cardContClass}
+                  cardData={card}
+                />
+              );
+            })}
+          </div>
 
-        <button className="left-btn" onClick={() => scroll(-250)} ref={leftBtn}>
-          <img
-            src={require("./images/chevron-left.png")}
-            alt="Left arrow"
-          ></img>
-        </button>
-        <button
-          className="right-btn"
-          onClick={() => scroll(250)}
-          ref={rightBtn}
-        >
-          <img src={Right} alt="Right arrow"></img>
-        </button>
-        <div className="shadow" ref={shadowRef}></div>
+          <button
+            className="left-btn"
+            onClick={() => scroll(-250)}
+            ref={leftBtn}
+          >
+            <img
+              src={require("./images/chevron-left.png")}
+              alt="Left arrow"
+            ></img>
+          </button>
+          <button
+            className="right-btn"
+            onClick={() => scroll(250)}
+            ref={rightBtn}
+          >
+            <img src={Right} alt="Right arrow"></img>
+          </button>
+          <div className="shadow" ref={shadowRef}></div>
+        </div>
       </div>
-    </div>
+      {data.section_advertisement ? (
+        <div className="container">
+          <Advertisment
+            image={"./Adv2.png"}
+            width={720}
+            adclass="adv-l advl2"
+          />
+        </div>
+      ) : null}
+    </>
   );
 }
 
