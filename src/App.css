@@ -477,6 +477,20 @@ nav button:hover {
   border-radius: 10px !important;
 }
 
+.meta {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.meta .mid {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background: #b5b5b5;
+}
+
 .a-author {
   font-family: "Montserrat";
   font-size: 12px;

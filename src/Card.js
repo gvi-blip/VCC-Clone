@@ -129,6 +129,64 @@ export function TopNewsCardL(props) {
   );
 }
 
+// export function Meta(props) {
+//   const { author_details, publish, address } = props;
+//   const ttRef = useRef("");
+//   const date = publish ? new Date(Date.parse(publish)) : "";
+//   const day = date
+//     ? date.getDate() < 10
+//       ? `0${date.getDate()}`
+//       : `${date.getDate()}`
+//     : "";
+//   const month = date ? date.toLocaleString("default", { month: "long" }) : "";
+//   return (
+//     <p>
+//       <span>
+//         <span className="card-date">
+//           {day} {month}
+//         </span>
+//         {address ? null : <span className="middot">&middot;</span>}
+
+//         {author_details && author_details[0]?.name ? (
+//           <span className="card-author" style={{ width: "50px" }}>
+//             <Link to={author_details[0].slug}>{author_details[0].name}</Link>
+//           </span>
+//         ) : null}
+//         {/* {address ? <p className="card-address">{address}</p> : null} */}
+//       </span>
+
+//       {author_details && author_details.length > 1 ? (
+//         <span
+//           className="a-author"
+//           onMouseEnter={() => {
+//             ttRef.current.style.display = "block";
+//           }}
+//           style={{ marginLeft: "10px" }}
+//         >
+//           <span>{`+${author_details.length - 1}`}</span>
+//           <div
+//             className="a-author-tooltip"
+//             ref={ttRef}
+//             onMouseLeave={() => {
+//               ttRef.current.style.display = "none";
+//             }}
+//           >
+//             <ul style={{ listStyle: "none", padding: "10px" }}>
+//               {author_details.map((author, index) => {
+//                 if (index === 0) return null;
+//                 return (
+//                   <li>
+//                     <Link to={author.slug || ""}>{author.name}</Link>
+//                   </li>
+//                 );
+//               })}
+//             </ul>
+//           </div>
+//         </span>
+//       ) : null}
+//     </p>
+//   );
+// }
 export function Meta(props) {
   const { author_details, publish, address } = props;
   const ttRef = useRef("");
@@ -140,23 +198,21 @@ export function Meta(props) {
     : "";
   const month = date ? date.toLocaleString("default", { month: "long" }) : "";
   return (
-    <p>
-      <span>
-        <span className="card-date">
-          {day} {month}
-        </span>
-        {address ? null : <span className="middot">&middot;</span>}
-
-        {author_details && author_details[0]?.name ? (
-          <span className="card-author" style={{ width: "50px" }}>
-            <Link to={author_details[0].slug}>{author_details[0].name}</Link>
-          </span>
-        ) : null}
-        {/* {address ? <p className="card-address">{address}</p> : null} */}
-      </span>
-
+    <ul className="meta">
+      {/* <span> */}
+      <li className={`card-date`}>
+        {day} {month}
+      </li>
+      {address ? null : <li className="mid"></li>}
+      {author_details && author_details[0]?.name ? (
+        <li className="card-author">
+          <Link to={author_details[0].slug}>{author_details[0].name}</Link>
+        </li>
+      ) : null}
+      {/* {address ? <p className="card-address">{address}</p> : null} */}
+      {/* </span> */}
       {author_details && author_details.length > 1 ? (
-        <span
+        <li
           className="a-author"
           onMouseEnter={() => {
             ttRef.current.style.display = "block";
@@ -182,9 +238,9 @@ export function Meta(props) {
               })}
             </ul>
           </div>
-        </span>
+        </li>
       ) : null}
-    </p>
+    </ul>
   );
 }
 
