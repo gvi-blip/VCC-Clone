@@ -119,10 +119,10 @@ function TopStories(props) {
             <div className="container">
               {stories_list.map((card, index) => {
                 if (card === null || card === undefined) return null;
-                if (index === 4 && card.author_details.length === 1) {
-                  card.author_details.push({ name: "GVI" });
-                  card.author_details.push({ name: "Papon Dillo" });
-                }
+                // if (index === 4 && card.author_details.length === 1) {
+                //   card.author_details.push({ name: "GVI" });
+                //   card.author_details.push({ name: "Papon Dillo" });
+                // }
                 if (index === 0)
                   return (
                     <TopNewsCardL

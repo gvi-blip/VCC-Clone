@@ -16,8 +16,8 @@ function VCCTV(props) {
     publish,
   } = stories_list[0];
 
-  author_details.push({ name: "GVI" });
-  author_details.push({ name: "Papon Dillo" });
+  // author_details.push({ name: "GVI" });
+  // author_details.push({ name: "Papon Dillo" });
   return (
     <>
       {section_advertisement ? (
