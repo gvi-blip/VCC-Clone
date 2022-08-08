@@ -20,6 +20,11 @@
 .vcctv button {
   border: none;
   background: none;
+  transition: 0.8s ease;
+}
+
+.vcctv button:hover {
+  color: #096ffa;
 }
 .vcctv img {
   width: 550px;

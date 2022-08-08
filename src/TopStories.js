@@ -4,14 +4,7 @@ import Card, { TopNewsCardL } from "./Card";
 function TopStories(props) {
   const { data } = props;
   const { stories_list, section_advertisement } = data;
-  //   const check = {
-  //     q: { b: { e: { d: 5 } } },
-  //   };
-  //   console.log(check?.a?.b?.c || "Yolo");
-  //   delete stories_list[0].industry_details;
-  //   console.log(
-  //     stories_list[0].industry_details?.industry_details[0].name.toUpperCase()
-  //   );
+
   return (
     <>
       {stories_list && stories_list.length > 0 ? (

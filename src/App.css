@@ -63,6 +63,7 @@ button:hover {
 
 .card-image-cont img {
   width: 100%;
+  object-fit: cover;
 }
 .premium-tag {
   position: absolute;
@@ -493,7 +494,7 @@ nav button:hover {
   transform: translateX(-50%);
   background: white;
   box-shadow: 0px 5px 17px 0px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 4;
 }
 .a-author-tooltip::after {
   content: "";
@@ -683,6 +684,11 @@ nav button:hover {
   font-weight: 400;
   text-decoration: none;
   color: #222;
+  transition: 0.8s ease;
+}
+
+.slider-comp .title a:hover {
+  color: #096ffa;
 }
 .slider-comp .title a i {
   font-size: 11px !important;
@@ -801,6 +807,7 @@ nav button:hover {
 }
 .lp-cards img {
   width: 100%;
+  height: 130px;
 }
 .lp-cards .card-content {
   color: #222222;
@@ -858,6 +865,7 @@ nav button:hover {
 .vcp-cards .card-image-cont img {
   border-bottom-left-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
+  height: 180px;
 }
 
 .vcp-cards > div:nth-of-type(2) {
@@ -973,6 +981,7 @@ nav button:hover {
 
 .fn-cards .card-image-cont img {
   width: 100%;
+  height: 130px;
 }
 /* TMT SLider */
 .tmt .container {
@@ -984,6 +993,10 @@ nav button:hover {
   min-width: 250px;
 }
 
+.tmt-cards img,
+.mac-cards img {
+  height: 150px;
+}
 .tmt .right-btn {
   top: 56%;
 }
@@ -1089,6 +1102,7 @@ nav button:hover {
 
 .more-stories-cards .card-image-cont img {
   width: 200px;
+  height: 113px;
 }
 
 .more-stories-cards .card-title {

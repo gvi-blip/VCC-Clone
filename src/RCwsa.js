@@ -24,14 +24,24 @@ function RCwsa(props) {
           </h2>
           <div className="sac-card-cont">
             <div>
-              <Card cardClass="rcwsa-card-l" cardData={stories_list[0]} />
+              <Card
+                cardClass="rcwsa-card-l"
+                cardData={stories_list[0]}
+                key={stories_list[0]?.feid || ""}
+              />
             </div>
             <div>
               {stories_list.map((card, index) => {
                 if (index === 0) {
                   return null;
                 }
-                return <Card cardClass="rcwsa-cards-s" cardData={card} />;
+                return (
+                  <Card
+                    cardClass="rcwsa-cards-s"
+                    cardData={card}
+                    key={card?.feid || ""}
+                  />
+                );
               })}
             </div>
           </div>

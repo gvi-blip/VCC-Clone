@@ -75,6 +75,7 @@ function App() {
                 }
                 data={item}
                 crown={item.section_slug === "vccircle-premium"}
+                subscribeButton={item.section_slug === "vccircle-premium"}
               />
             );
           }
