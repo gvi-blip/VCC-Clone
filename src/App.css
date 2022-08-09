@@ -768,6 +768,7 @@ nav button:hover {
 }
 
 .slider-comp .cards:not(.vcp-cards) .card-title {
+  display: none;
   font-weight: 700;
   font-size: 14px;
   color: #316df1;
@@ -938,6 +939,7 @@ nav button:hover {
   margin-top: 5px;
 }
 .vcp-cards .card-title {
+  display: block !important;
   color: #096ffa;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
