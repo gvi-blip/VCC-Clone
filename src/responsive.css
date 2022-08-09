@@ -690,6 +690,10 @@
   .rcwsa-cards-s .meta {
     margin-top: 6px;
   }
+
+  .slider-comp .cards .card {
+    min-width: 75%;
+  }
 }
 @media (max-width: 450px) {
   .top-news .text-content button {

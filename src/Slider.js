@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 import Advertisment from "./Advertisment/Advertisment";
 
 function Slider(props) {
+  const titleRef = useRef();
+  const rightBtn = useRef();
+  const leftBtn = useRef();
+  const shadowRef = useRef();
+  const rowRef = useRef();
   const {
     titleAbbreviation,
     sliderClass,
@@ -15,36 +20,26 @@ function Slider(props) {
     cardContClass,
   } = props;
   const handleResize = useCallback(() => {
-    if (titleAbbreviation) {
-      if (window.innerWidth < 576) {
-        titleRef.current.style.display = "none";
-      } else {
-        titleRef.current.style.display = "block";
-      }
-    }
-  }, [titleAbbreviation]);
+    btnsDisplay(true);
+  }, []);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    if (titleAbbreviation && window.innerWidth < 576) {
-      titleRef.current.classList.add("d-none");
-    }
+
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize, titleAbbreviation]);
 
-  const titleRef = useRef();
-  const rightBtn = useRef();
-  const leftBtn = useRef();
-  const shadowRef = useRef();
-  const rowRef = useRef();
-
-  function btnsDisplay() {
+  function btnsDisplay(resize) {
     const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
     const scrollLeft = rowRef.current.scrollLeft;
     if (scrollLeft === 0) {
       leftBtn.current.style.display = "none";
+      if (resize) {
+        rightBtn.current.style.display = "block";
+      }
       shadowRef.current.classList.remove("d-none");
     }
     if (scrollLeft > 0) {
@@ -96,7 +91,6 @@ function Slider(props) {
             {subscribeButton ? (
               <button>SUBSCRIBE</button>
             ) : (
-              // <p className="mts">
               <Link to="/" className="mts vm">
                 View More{" "}
                 <i
@@ -104,7 +98,6 @@ function Slider(props) {
                   style={{ fontSize: "12px" }}
                 ></i>
               </Link>
-              // </p>
             )}
           </div>
           <div
@@ -112,7 +105,7 @@ function Slider(props) {
             ref={rowRef}
             onScroll={() => {
               if (window.innerWidth > 576) {
-                btnsDisplay();
+                btnsDisplay(false);
               }
             }}
           >

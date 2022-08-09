@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header/Header";
 import Card from "./Card";
 import RCwsa from "./RCwsa";
 import VCCTV from "./VCCTV";
-import Footer from "./Footer";
 import Slider from "./Slider";
-// import Adv3 from './Advertisment/Adv3.png'
-import "./App.css";
-import "./responsive.css";
-
 import TopStories from "./TopStories";
 import Infographic from "./Infographic";
-import { BrowserRouter as Router } from "react-router-dom";
+import Author from "./Author";
+import Industry from "./Industry";
+import Story from "./Story";
+import Header from "./Header/Header";
+import Footer from "./Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "./App.css";
+import "./responsive.css";
 const sliderCompClasses = {
   "limited-partner": {
     sliderClass: "limited-partner",
@@ -50,21 +52,24 @@ const sliderCompClasses = {
     cardContClass: "check",
   },
 };
-function App() {
+function HomePage() {
+  const [loader, setLoader] = useState(true);
   const [apiData, setApiData] = useState([]);
   useEffect(() => {
     fetch("https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185")
       .then((response) => response.json())
       .then((data) => {
         setApiData(data.section_list);
+        setLoader(false);
       });
   }, []);
 
   return (
     <>
-      <Header />
-      <Router>
-        {apiData.map((item) => {
+      {loader ? (
+        <div className="basic"></div>
+      ) : (
+        apiData.map((item) => {
           if (item.section_slug in sliderCompClasses) {
             return (
               <Slider
@@ -76,14 +81,17 @@ function App() {
                 data={item}
                 crown={item.section_slug === "vccircle-premium"}
                 subscribeButton={item.section_slug === "vccircle-premium"}
+                key={item.section_slug}
               />
             );
           }
           if (item.section_slug === "top-stories") {
-            return <TopStories data={item}></TopStories>;
+            return (
+              <TopStories data={item} key={item.section_slug}></TopStories>
+            );
           }
           if (item.section_slug === "infographic") {
-            return <Infographic></Infographic>;
+            return <Infographic key={item.section_slug}></Infographic>;
           }
 
           if (item.section_slug === "vcc-tv") {
@@ -91,6 +99,7 @@ function App() {
               <VCCTV
                 url="https://www.youtube.com/embed/THL1OPn72vo"
                 data={item}
+                key={item.section_slug}
               />
             );
           }
@@ -99,11 +108,13 @@ function App() {
             item.section_slug === "editors-pick" ||
             item.section_slug === "most-popular"
           ) {
-            return <RCwsa ad={"./Adv3.png"} data={item} />;
+            return (
+              <RCwsa ad={"./Adv3.png"} data={item} key={item.section_slug} />
+            );
           }
           if (item.section_slug === "more-stories") {
             return (
-              <section className="more-stories">
+              <section className="more-stories" key={item.section_slug}>
                 <div
                   className={`container ${
                     item.section_border && item.section_border === "1"
@@ -115,7 +126,11 @@ function App() {
                   <div>
                     {item.stories_list.map((card) => {
                       return (
-                        <Card cardClass="more-stories-cards" cardData={card} />
+                        <Card
+                          cardClass="more-stories-cards"
+                          cardData={card}
+                          key={card?.feid || ""}
+                        />
                       );
                     })}
                   </div>
@@ -124,7 +139,24 @@ function App() {
             );
           }
           return null;
-        })}
+        })
+      )}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Header></Header>
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/author/:author_name" element={<Author />}></Route>
+          <Route path="/industry/:industry_name" element={<Industry />}></Route>
+          <Route path="/:story_name" element={<Story />}></Route>
+        </Routes>
       </Router>
 
       <Footer></Footer>
