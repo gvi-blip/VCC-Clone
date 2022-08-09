@@ -201,6 +201,7 @@
 
   .top-news-cards .card-content {
     -webkit-line-clamp: 3;
+    height: 72px;
   }
 
   .vcctv .container > div:nth-of-type(2) {
@@ -220,6 +221,9 @@
     overflow: hidden;
     margin-bottom: 5px;
     height: 69px;
+  }
+  .more-stories-cards .meta {
+    margin-top: 7px;
   }
   footer .other-links {
     width: 80%;
@@ -244,6 +248,7 @@
 
   .rcwsa-cards-s .card-image-cont img {
     width: 145px;
+    height: 90px;
   }
 
   .socials .container > div:nth-of-type(2) img {
@@ -344,6 +349,9 @@
   .fin .left-btn,
   .fin .right-btn {
     top: 240px;
+  }
+  .rcwsa-cards-s .meta {
+    margin-top: 6px;
   }
 }
 @media (max-width: 576px) {
@@ -678,6 +686,10 @@
     width: 120px;
     height: 92px;
   }
+
+  .rcwsa-cards-s .meta {
+    margin-top: 6px;
+  }
 }
 @media (max-width: 450px) {
   .top-news .text-content button {
@@ -697,6 +709,7 @@
   }
   .top-news-cards .card-title {
     font-size: 10px;
+    margin-bottom: 0px;
   }
   .top-news-cards .card-content {
     font-size: 14px;
@@ -1191,13 +1204,17 @@
     padding-right: 0px;
     height: 67px;
     overflow: hidden;
-    margin-bottom: 0px;
+    margin: 3px 0;
     width: 90%;
   }
-  .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
+  /* .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
     height: 17px;
     line-height: 15px;
     overflow: hidden;
+  } */
+
+  .more-stories-cards .meta {
+    margin-top: 0px;
   }
   .socials .container > div:first-of-type {
     width: 300px;
@@ -1362,7 +1379,6 @@
   }
 
   .tn-cards-cont .container {
-    border-bottom: 1px solid #eeeeee;
     margin-bottom: 15px;
   }
   .small-ad-comp {
@@ -1580,14 +1596,13 @@
 
   .more-stories-cards .card-title {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .more-stories-cards .card-content {
     height: 70px;
-    margin-bottom: 4px;
     width: 90%;
-    margin-top: 3px;
+    margin: 7px 0px;
     font-size: 19px;
   }
 
@@ -1906,6 +1921,9 @@
   }
 }
 @media (max-width: 450px) {
+  .top-news-cards .meta {
+    margin-top: 7px;
+  }
   .rcwsa-card-l .card-content {
     font-size: 16px !important;
     line-height: 22px;
