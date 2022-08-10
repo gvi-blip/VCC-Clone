@@ -56,6 +56,7 @@ function HomePage() {
   const [loader, setLoader] = useState(true);
   const [apiData, setApiData] = useState([]);
   useEffect(() => {
+    console.log("inner");
     fetch("https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185")
       .then((response) => response.json())
       .then((data) => {
@@ -147,8 +148,8 @@ function HomePage() {
 
 function App() {
   return (
-    <>
-      <Header></Header>
+    <div className="wrapper-daddy">
+      <Header />
 
       <Router>
         <Routes>
@@ -159,8 +160,8 @@ function App() {
         </Routes>
       </Router>
 
-      <Footer></Footer>
-    </>
+      <Footer />
+    </div>
   );
 }
 
