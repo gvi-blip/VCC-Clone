@@ -265,11 +265,11 @@
     width: 330px;
   }
 
-  .up-ev .shadow {
+  /* .up-ev .shadow {
     height: 170px;
-  }
+  } */
 
-  .tmt .shadow,
+  /* .tmt .shadow,
   .tc .shadow,
   .fin .shadow {
     top: 25%;
@@ -278,7 +278,7 @@
   .mac .shadow {
     top: 15%;
     height: 310px;
-  }
+  } */
   .tmt-cards,
   .tc-cards,
   .mac-cards,
@@ -308,10 +308,10 @@
     width: 150px;
   }
   .vc-premium .shadow {
-    height: 335px;
+    /* height: 335px; */
     width: 200px;
   }
-  .limited-partner .right-btn,
+  /* .limited-partner .right-btn,
   .limited-partner .left-btn {
     top: 195px;
   }
@@ -349,7 +349,7 @@
   .fin .left-btn,
   .fin .right-btn {
     top: 240px;
-  }
+  } */
   .rcwsa-cards-s .meta {
     margin-top: 6px;
   }
@@ -842,9 +842,7 @@
     bottom: 10px !important;
     right: 45px !important;
   }
-  /* .limited-partner .shadow {
-    top: 25%;
-  } */
+
   .rcwsa-card-l .card-content {
     -webkit-line-clamp: 3;
   }
@@ -923,15 +921,15 @@
     height: 130px;
   }
 
-  .limited-partner .container .shadow {
+  /* .limited-partner .container .shadow {
     top: 90px;
-  }
+  } */
   .shadow:not(.vc-premium .shadow, .limited-partner .shadow, .fn .shadow, .up-ev
       .shadow) {
     width: 200px;
   }
   .vc-premium .shadow {
-    height: 320px;
+    /* height: 320px; */
     width: 190px;
   }
 
@@ -939,7 +937,7 @@
     margin-top: 10px;
   }
 
-  .limited-partner .right-btn,
+  /* .limited-partner .right-btn,
   .limited-partner .left-btn {
     top: 215px;
   }
@@ -977,7 +975,7 @@
   .fin .left-btn,
   .fin .right-btn {
     top: 225px;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -1058,11 +1056,7 @@
     bottom: 15px;
     left: 6px;
   }
-  /* .socials .container > div:first-of-type div {
-    bottom: 122px;
-    left: 7.5px;
-    width: 98.5%;
-  } */
+
   .socials .container > div:nth-of-type(2) {
     width: 100%;
     padding: 20px 0;
@@ -1215,11 +1209,6 @@
     margin: 3px 0;
     width: 90%;
   }
-  /* .more-stories-cards > div:nth-of-type(2) p:nth-of-type(3) {
-    height: 17px;
-    line-height: 15px;
-    overflow: hidden;
-  } */
 
   .more-stories-cards .meta {
     margin-top: 0px;
@@ -1245,9 +1234,9 @@
     min-width: 230px;
   }
 
-  .limited-partner .container .shadow {
+  /* .limited-partner .container .shadow {
     top: 90px;
-  }
+  } */
   .slider-comp .lp-cards .card-image-cont img {
     width: 100%;
   }
@@ -1281,11 +1270,11 @@
   }
 
   .vc-premium .shadow {
-    height: 350px;
+    /* height: 350px; */
     width: 220px;
   }
 
-  .limited-partner .right-btn,
+  /* .limited-partner .right-btn,
   .limited-partner .left-btn {
     top: 242px;
   }
@@ -1323,7 +1312,7 @@
   .fin .left-btn,
   .fin .right-btn {
     top: 225px;
-  }
+  } */
 }
 @media (max-width: 992px) {
   .more-stories-cards:nth-of-type(6) {
@@ -1462,9 +1451,6 @@
     width: 540px;
   }
 
-  /* .more-stories h3 {
-    text-align: center;
-  } */
   .socials .container {
     flex-wrap: wrap;
     justify-content: center;
@@ -1492,12 +1478,6 @@
   .rcwsa-cards-s .card-title {
     margin-bottom: 0;
   }
-  /* .more-stories .container > div {
-    justify-content: space-between;
-  } */
-  /* .more-stories h3 {
-    text-align: center;
-  } */
 }
 @media (max-width: 991px) {
   .more-stories .container h3 {
@@ -1630,12 +1610,12 @@
     width: 45%;
   }
 
-  .limited-partner .container .shadow {
+  /* .limited-partner .container .shadow {
     top: 90px;
   }
   .fn .container .shadow {
     height: 280px;
-  }
+  } */
   .tmt-cards,
   .tc-cards,
   .mac-cards,
@@ -1662,12 +1642,12 @@
       .shadow) {
     width: 250px;
   }
-  .vc-premium .shadow {
-    height: 350px;
-  }
 
   .socials .container .adv-sp {
     width: 322px;
+  }
+  /* .vc-premium .shadow {
+    height: 350px;
   }
 
   .limited-partner .right-btn,
@@ -1708,7 +1688,7 @@
   .fin .left-btn,
   .fin .right-btn {
     top: 250px;
-  }
+  } */
 }
 @media (min-width: 1400px) {
   .container {
@@ -1721,8 +1701,8 @@
   .shadow:not(.vc-premium .shadow, .limited-partner .shadow, .fn .shadow, .up-ev
       .shadow) {
     width: 240px;
-    height: 310px;
-    top: 100px;
+    /* height: 310px;
+    top: 100px; */
   }
 
   .advl1 img {
@@ -1866,11 +1846,11 @@
   }
 
   .vc-premium .shadow {
-    height: 360px;
+    /* height: 360px; */
     width: 250px;
   }
 
-  .limited-partner .right-btn,
+  /* .limited-partner .right-btn,
   .limited-partner .left-btn {
     top: 238px;
   }
@@ -1910,7 +1890,7 @@
   .fn .container .shadow {
     height: 270px;
     top: 75px;
-  }
+  } */
 
   .small-ad-comp .adv-s {
     width: 345px;

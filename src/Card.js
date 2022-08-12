@@ -67,6 +67,7 @@ export function TopNewsCardL(props) {
     title,
     summary,
     premium,
+    loader,
 
     slug,
   } = cardData;
@@ -76,21 +77,23 @@ export function TopNewsCardL(props) {
       <section className="top-news">
         <div className="container">
           <div className="text-content">
-            <p className="mts">
+            <p className={`mts ${loader ? "ld-animation" : ""}`}>
               <Link to={(industry_details && industry_details[0]?.slug) || ""}>
                 {(industry_details &&
                   industry_details[0]?.name.toUpperCase()) ||
                   ""}
               </Link>
             </p>
-            <h1>
+            <h1 className={loader ? "ld-animation" : ""}>
               <Link to={slug || ""}>{title || ""}</Link>
             </h1>
-            <p className="mts">{summary || ""}</p>
+            <p className={`mts ${loader ? "ld-animation" : ""}`}>
+              {summary || ""}
+            </p>
             <Meta author_details={author_details} publish={publish}></Meta>
             <Link to={slug || ""}>
               <button
-                className="mts"
+                className={`mts ${loader ? "ld-animation" : ""}`}
                 onClick={() => {
                   console.log(slug);
                 }}

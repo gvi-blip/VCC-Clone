@@ -18,20 +18,34 @@ function Slider(props) {
     data,
     cardClass,
     cardContClass,
+    loader,
   } = props;
   const handleResize = useCallback(() => {
+    setShadowDimensions();
+    setButtonPosition();
     btnsDisplay(true);
   }, []);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     handleResize();
+    setShadowDimensions();
+    setButtonPosition();
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize, titleAbbreviation]);
 
+  function setShadowDimensions() {
+    shadowRef.current.style.height = rowRef.current.clientHeight + "px";
+    shadowRef.current.style.top = rowRef.current.offsetTop + "px";
+  }
+  function setButtonPosition() {
+    const btnTop =
+      rowRef.current.offsetTop + rowRef.current.clientHeight * 0.45;
+    leftBtn.current.style.top = rightBtn.current.style.top = btnTop + "px";
+  }
   function btnsDisplay(resize) {
     const m = rowRef.current.scrollWidth - rowRef.current.clientWidth;
     const scrollLeft = rowRef.current.scrollLeft;
@@ -116,6 +130,7 @@ function Slider(props) {
                   cardClass={cardClass}
                   cardContClass={cardContClass}
                   cardData={card}
+                  loader={loader}
                 />
               );
             })}

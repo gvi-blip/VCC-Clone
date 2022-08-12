@@ -56,7 +56,6 @@ function HomePage() {
   const [loader, setLoader] = useState(true);
   const [apiData, setApiData] = useState([]);
   useEffect(() => {
-    console.log("inner");
     fetch("https://run.mocky.io/v3/25b66855-89a3-45a5-8db6-85fc85041185")
       .then((response) => response.json())
       .then((data) => {
@@ -70,6 +69,7 @@ function HomePage() {
       {loader ? (
         <div className="basic"></div>
       ) : (
+        // {
         apiData.map((item) => {
           if (item.section_slug in sliderCompClasses) {
             return (
@@ -83,12 +83,17 @@ function HomePage() {
                 crown={item.section_slug === "vccircle-premium"}
                 subscribeButton={item.section_slug === "vccircle-premium"}
                 key={item.section_slug}
+                loader={loader}
               />
             );
           }
           if (item.section_slug === "top-stories") {
             return (
-              <TopStories data={item} key={item.section_slug}></TopStories>
+              <TopStories
+                data={item}
+                key={item.section_slug}
+                loader={loader}
+              ></TopStories>
             );
           }
           if (item.section_slug === "infographic") {

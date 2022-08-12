@@ -41,7 +41,7 @@ button:hover {
 .card {
   position: relative;
 }
-.card-shadow {
+/* .card-shadow {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -49,7 +49,7 @@ button:hover {
   left: 0;
   border: 1px solid black;
   background: transparent linear-gradient(90deg, #ffffff41 0%, #ffffff 100%);
-}
+} */
 
 .card-content {
   text-align: left;
@@ -119,6 +119,17 @@ button:hover {
   }
 }
 
+.ld-animation {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+@keyframes skeleton-loading {
+  0% {
+    background: hsl(200, 20%, 70%);
+  }
+  100% {
+    background: hsl(200, 20%, 95%);
+  }
+}
 /* Header */
 
 .h-wrap {
