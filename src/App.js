@@ -10,6 +10,7 @@ import Industry from "./Industry";
 import Story from "./Story";
 import Header from "./Header/Header";
 import Footer from "./Footer";
+import LoadingSkeleton from "./components/loadingSkeleton/loadingSkeleton"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
@@ -67,7 +68,8 @@ function HomePage() {
   return (
     <>
       {loader ? (
-        <div className="basic"></div>
+        // <div className="basic"></div>
+        <LoadingSkeleton/>
       ) : (
         // {
         apiData.map((item) => {
