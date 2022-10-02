@@ -164,6 +164,7 @@ function App() {
           <Route path="/author/:author_name" element={<Author />}></Route>
           <Route path="/industry/:industry_name" element={<Industry />}></Route>
           <Route path="/:story_name" element={<Story />}></Route>
+          <Route path="/skeleton" element={<LoadingSkeleton />}></Route>
         </Routes>
       </Router>
 
